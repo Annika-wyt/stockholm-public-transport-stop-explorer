@@ -1,0 +1,8 @@
+station_id,station_name,latitude,longitude
+station-1,Central,59.33,18.05
+station-2,Square,59.34,18.06
+station-2,Duplicate Square,59.341,18.061
+station-3,Broken coordinates,not-a-number,18.07
+station-4,,59.35,18.08
+,Missing ID,59.36,18.09
+

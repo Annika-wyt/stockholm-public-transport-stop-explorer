@@ -1,0 +1,9 @@
+.venv*/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.DS_Store
+
+# The supplied national GTFS snapshot is about 1.1 GB and includes a file over
+# GitHub's file-size limit. The small generated CSV files in data/ are tracked.
+sweden-20260801/

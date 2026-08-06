@@ -1,0 +1,9 @@
+station_id,transport_type,line,destination
+station-1,Metro,10,Hjulsta
+station-1,Metro,10,Hjulsta
+station-1,Metro,10,
+station-1,Bus,1,Frihamnen
+station-2,,55,Tanto
+station-2,Tram,,Solna station
+,Bus,2,Nowhere
+

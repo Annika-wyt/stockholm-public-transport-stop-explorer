@@ -1,0 +1,2039 @@
+station_id,transport_type,line,destination
+740000001,Commuter train / Pendeltåg,40,Stockholm Centralstation
+740000001,Commuter train / Pendeltåg,40,Södertälje centrum station
+740000001,Commuter train / Pendeltåg,40,Uppsala Centralstation
+740000001,Commuter train / Pendeltåg,41,Märsta station
+740000001,Commuter train / Pendeltåg,41,Stockholm Centralstation
+740000001,Commuter train / Pendeltåg,41,Södertälje centrum station
+740000001,Commuter train / Pendeltåg,41,Älvsjö station
+740000001,Commuter train / Pendeltåg,43,Bålsta station
+740000001,Commuter train / Pendeltåg,43,Nynäshamn station
+740000001,Commuter train / Pendeltåg,43,Stockholm Centralstation
+740000001,Commuter train / Pendeltåg,43,Tungelsta station
+740000001,Commuter train / Pendeltåg,43,Västerhaninge station
+740000765,Commuter train / Pendeltåg,40,Flemingsberg station
+740000765,Commuter train / Pendeltåg,40,Häggvik station
+740000765,Commuter train / Pendeltåg,40,Knivsta station
+740000765,Commuter train / Pendeltåg,40,Rönninge station
+740000765,Commuter train / Pendeltåg,40,Solna station
+740000765,Commuter train / Pendeltåg,40,Stockholm södra station
+740000765,Commuter train / Pendeltåg,40,Södertälje centrum station
+740000765,Commuter train / Pendeltåg,40,Södertälje hamn station
+740000765,Commuter train / Pendeltåg,40,Tumba station
+740000765,Commuter train / Pendeltåg,40,Uppsala Centralstation
+740000765,Commuter train / Pendeltåg,40,Älvsjö station
+740000765,Commuter train / Pendeltåg,40,Östertälje station
+740000765,Commuter train / Pendeltåg,41,Flemingsberg station
+740000765,Commuter train / Pendeltåg,41,Märsta station
+740000765,Commuter train / Pendeltåg,41,Rosersberg station
+740000765,Commuter train / Pendeltåg,41,Rönninge station
+740000765,Commuter train / Pendeltåg,41,Sollentuna station
+740000765,Commuter train / Pendeltåg,41,Stockholm City station
+740000765,Commuter train / Pendeltåg,41,Stockholm Odenplan station
+740000765,Commuter train / Pendeltåg,41,Södertälje centrum station
+740000765,Commuter train / Pendeltåg,41,Södertälje hamn station
+740000765,Commuter train / Pendeltåg,41,Tumba station
+740000765,Commuter train / Pendeltåg,41,Upplands Väsby station
+740000765,Commuter train / Pendeltåg,41,Uppsala Centralstation
+740000765,Commuter train / Pendeltåg,41,Älvsjö station
+740000765,Commuter train / Pendeltåg,41,Östertälje station
+740000765,Commuter train / Pendeltåg,43,Barkarby station
+740000765,Commuter train / Pendeltåg,43,Bro station
+740000765,Commuter train / Pendeltåg,43,Bålsta station
+740000765,Commuter train / Pendeltåg,43,Handen station
+740000765,Commuter train / Pendeltåg,43,Kallhäll station
+740000765,Commuter train / Pendeltåg,43,Kungsängen station
+740000765,Commuter train / Pendeltåg,43,Nynäshamn station
+740000765,Commuter train / Pendeltåg,43,Skogås station
+740000765,Commuter train / Pendeltåg,43,Stockholm City station
+740000765,Commuter train / Pendeltåg,43,Stockholm Odenplan station
+740000765,Commuter train / Pendeltåg,43,Tungelsta station
+740000765,Commuter train / Pendeltåg,43,Västerhaninge station
+740000765,Commuter train / Pendeltåg,43,Älvsjö station
+740000765,Commuter train / Pendeltåg,43,Årstaberg station
+740001174,Bus,1,Essingetorget
+740001174,Bus,1,Stockholm Frihamnen
+740001174,Bus,76,Karlaplan T-bana
+740001174,Bus,76,Ljusterögatan
+740001174,Bus,76,Ropsten T-bana
+740001174,Bus,76,Slussen T-bana
+740001174,Bus,76,Stockholm Frihamnen
+740001179,Bus,3,Fridhemsplan T-bana
+740001179,Bus,3,Karolinska sjukhuset norra
+740001179,Bus,3,Slussen T-bana
+740001179,Bus,3,Södersjukhuset
+740001179,Bus,72,Karolinska sjukhuset norra
+740001179,Bus,72,Östhammarsgatan
+740001541,Bus,1,Essingetorget
+740001541,Bus,1,Stockholm Frihamnen
+740001541,Bus,75,Ropsten T-bana
+740001541,Bus,75,Stockholm Citytermin Kungsbron
+740004046,Metro,13,Alby T-bana
+740004046,Metro,13,Axelsberg T-bana
+740004046,Metro,13,Norsborg T-bana
+740004046,Metro,13,Ropsten T-bana
+740004046,Metro,13,Sätra T-bana
+740004046,Metro,14,Fruängen T-bana
+740004046,Metro,14,Liljeholmen T-bana
+740004046,Metro,14,Mörby centrum T-bana
+740004046,Metro,14,Tekniska Högskolan T-bana
+740004046,Metro,14,Telefonplan T-bana
+740004046,Tram,30,Bällsta bro Spårv
+740004046,Tram,30,Johannesfred Spårv
+740004046,Tram,30,Sickla station
+740004046,Tram,30,Solna station
+740004383,Bus,2,Stockholm Sveaplan
+740004383,Bus,53,Karolinska institutet västra
+740004383,Bus,65,Moa Martinsons torg
+740004383,Bus,65,Stockholm Kastellholmsbron
+740004383,Bus,65,Stockholm Nationalmuseum
+740004383,Bus,69,Djurgårdsbrunn
+740004383,Bus,69,Stockholm Blockhusudden
+740004383,Bus,69,Stockholm C Klarabergsviadukte
+740010947,Bus,65,Moa Martinsons torg
+740010947,Bus,65,Stockholm Kastellholmsbron
+740010947,Bus,65,Stockholm Nationalmuseum
+740011060,Bus,75,Ropsten T-bana
+740011060,Bus,75,Stockholm Citytermin Kungsbron
+740011606,Bus,4,Gullmarsplan T-bana
+740011606,Bus,4,Radiohuset
+740011606,Bus,57,Motalavägen
+740011606,Bus,57,Tekniska Högskolan T-bana
+740011606,Bus,67,Frösundavik
+740011606,Bus,67,Karlaplan T-bana
+740011606,Bus,67,Odenplan T-bana
+740011606,Bus,67,Stockholm Blockhusudden
+740011606,Bus,67,Stockholm Skansen
+740011606,Bus,72,Karolinska sjukhuset norra
+740011606,Bus,72,Östhammarsgatan
+740011606,Metro,13,Sätra T-bana
+740011606,Metro,14,Fruängen T-bana
+740011606,Metro,14,Liljeholmen T-bana
+740011606,Metro,14,Mörby centrum T-bana
+740011606,Metro,14,Tekniska Högskolan T-bana
+740011606,Metro,14,Telefonplan T-bana
+740012127,Bus,3,Fridhemsplan T-bana
+740012127,Bus,3,Karolinska sjukhuset norra
+740012127,Bus,3,Slussen T-bana
+740012127,Bus,3,Södersjukhuset
+740012127,Bus,67,Frösundavik
+740012127,Bus,67,Karlaplan T-bana
+740012127,Bus,67,Stockholm Blockhusudden
+740012127,Bus,72,Karolinska sjukhuset norra
+740012127,Bus,72,Östhammarsgatan
+740014648,Ferry,80,Nacka strand Sjövägen
+740014648,Ferry,80,Stockholm Nybrokajen
+740014648,Ferry,80,Stockholm Ropsten brygga
+740014648,Ferry,82,Stockholm Allmänna gränd brygg
+740014648,Ferry,82,Stockholm Slussen kajen
+740015538,Ferry,82,Stockholm Slussen kajen
+740015539,Bus,57,Slussen T-bana
+740015539,Bus,57,Stockholm Tengdahlsgatan
+740015539,Bus,57,Tekniska Högskolan T-bana
+740015539,Bus,57,Tullgårdsparken
+740018280,Bus,67,Stockholm Blockhusudden
+740018280,Tram,7,Stockholm Norrmalmstorg Spårv
+740018280,Tram,7,Stockholm Waldemarsudde
+740018280,Tram,7,T-Centralen Spårv
+740018281,Bus,67,Frösundavik
+740018281,Bus,67,Odenplan T-bana
+740018281,Bus,67,Stockholm Blockhusudden
+740018281,Bus,67,Stockholm Skansen
+740018281,Tram,7,Stockholm Norrmalmstorg Spårv
+740018281,Tram,7,Stockholm Skansen
+740018281,Tram,7,Stockholm Waldemarsudde
+740018281,Tram,7,T-Centralen Spårv
+740018282,Bus,67,Frösundavik
+740018282,Bus,67,Odenplan T-bana
+740018282,Bus,67,Stockholm Blockhusudden
+740018282,Bus,67,Stockholm Skansen
+740018282,Tram,7,Stockholm Norrmalmstorg Spårv
+740018282,Tram,7,Stockholm Skansen
+740018282,Tram,7,Stockholm Waldemarsudde
+740018282,Tram,7,T-Centralen Spårv
+740019408,Bus,57,Motalavägen
+740019408,Bus,57,Slussen T-bana
+740019408,Bus,57,Stockholm Tengdahlsgatan
+740019408,Bus,57,Tullgårdsparken
+740019408,Bus,69,Djurgårdsbrunn
+740019408,Bus,69,Stockholm Blockhusudden
+740019408,Bus,69,Stockholm C Klarabergsviadukte
+740019408,Bus,76,Ljusterögatan
+740019408,Bus,76,Ropsten T-bana
+740019408,Bus,76,Slussen T-bana
+740019408,Bus,76,Stockholm Frihamnen
+740019408,Tram,7,Stockholm Norrmalmstorg Spårv
+740019408,Tram,7,Stockholm Skansen
+740019408,Tram,7,Stockholm Waldemarsudde
+740019408,Tram,7,T-Centralen Spårv
+740020691,Ferry,84,Stockholm Strömkajen
+740020691,Ferry,84,Ålstäket brygga
+740020741,Bus,4,Gullmarsplan T-bana
+740020741,Bus,4,Radiohuset
+740020741,Bus,57,Motalavägen
+740020741,Bus,57,Tekniska Högskolan T-bana
+740020741,Bus,72,Karolinska sjukhuset norra
+740020741,Bus,72,Östhammarsgatan
+740020741,Bus,75,Ropsten T-bana
+740020741,Bus,75,Stockholm Citytermin Kungsbron
+740020750,Local train / Roslagsbanan,27,Frösunda station
+740020750,Local train / Roslagsbanan,27,Kårsta station
+740020750,Local train / Roslagsbanan,27,Lindholmen station
+740020750,Local train / Roslagsbanan,27,Ormsta station
+740020750,Local train / Roslagsbanan,27,Stockholm Östra station
+740020750,Local train / Roslagsbanan,27S,Kårsta station
+740020750,Local train / Roslagsbanan,27S,Lindholmen station
+740020750,Local train / Roslagsbanan,27S,Stockholm Östra station
+740020750,Local train / Roslagsbanan,27V,Stockholm Östra station
+740020750,Local train / Roslagsbanan,28,Stockholm Östra station
+740020750,Local train / Roslagsbanan,28,Åkersberga station
+740020750,Local train / Roslagsbanan,28,Österskär station
+740020750,Local train / Roslagsbanan,28S,Stockholm Östra station
+740020750,Local train / Roslagsbanan,28S,Österskär station
+740020750,Local train / Roslagsbanan,28V,Stockholm Östra station
+740020750,Local train / Roslagsbanan,28V,Österskär station
+740020750,Local train / Roslagsbanan,29,Näsbypark station
+740020750,Local train / Roslagsbanan,29,Stockholm Östra station
+740020757,Bus,75,Ropsten T-bana
+740020757,Bus,75,Stockholm Citytermin Kungsbron
+740020757,Bus,76,Karlaplan T-bana
+740020757,Bus,76,Ljusterögatan
+740020757,Bus,76,Ropsten T-bana
+740020757,Bus,76,Slussen T-bana
+740020757,Metro,13,Alby T-bana
+740020757,Metro,13,Axelsberg T-bana
+740020757,Metro,13,Norsborg T-bana
+740020757,Metro,13,Ropsten T-bana
+740020757,Metro,13,Sätra T-bana
+740020757,Tram,21,Gåshaga brygga station
+740020757,Tram,21,Käppala station
+740020757,Tram,21,Lidingö Aga station
+740020757,Tram,21,Ropsten T-bana
+740021647,Metro,13,Sätra T-bana
+740021647,Metro,14,Fruängen T-bana
+740021647,Metro,14,Liljeholmen T-bana
+740021647,Metro,14,Mörby centrum T-bana
+740021647,Metro,14,Tekniska Högskolan T-bana
+740021647,Metro,14,Telefonplan T-bana
+740021649,Bus,1,Essingetorget
+740021649,Bus,1,Stockholm Frihamnen
+740021649,Metro,13,Alby T-bana
+740021649,Metro,13,Axelsberg T-bana
+740021649,Metro,13,Norsborg T-bana
+740021649,Metro,13,Ropsten T-bana
+740021649,Metro,13,Sätra T-bana
+740021650,Bus,67,Frösundavik
+740021650,Bus,67,Karlaplan T-bana
+740021650,Bus,67,Odenplan T-bana
+740021650,Bus,67,Stockholm Blockhusudden
+740021650,Bus,67,Stockholm Skansen
+740021650,Bus,69,Djurgårdsbrunn
+740021650,Bus,69,Karlaplan T-bana
+740021650,Bus,69,Stockholm Blockhusudden
+740021650,Bus,76,Karlaplan T-bana
+740021650,Bus,76,Ropsten T-bana
+740021650,Metro,13,Alby T-bana
+740021650,Metro,13,Axelsberg T-bana
+740021650,Metro,13,Norsborg T-bana
+740021650,Metro,13,Ropsten T-bana
+740021650,Metro,13,Sätra T-bana
+740021651,Metro,13,Alby T-bana
+740021651,Metro,13,Axelsberg T-bana
+740021651,Metro,13,Norsborg T-bana
+740021651,Metro,13,Ropsten T-bana
+740021651,Metro,13,Sätra T-bana
+740021651,Metro,14,Fruängen T-bana
+740021651,Metro,14,Liljeholmen T-bana
+740021651,Metro,14,Mörby centrum T-bana
+740021651,Metro,14,Tekniska Högskolan T-bana
+740021651,Metro,14,Telefonplan T-bana
+740021653,Metro,13,Alby T-bana
+740021653,Metro,13,Axelsberg T-bana
+740021653,Metro,13,Norsborg T-bana
+740021653,Metro,13,Ropsten T-bana
+740021653,Metro,13,Sätra T-bana
+740021653,Metro,14,Fruängen T-bana
+740021653,Metro,14,Liljeholmen T-bana
+740021653,Metro,14,Mörby centrum T-bana
+740021653,Metro,14,Tekniska Högskolan T-bana
+740021653,Metro,14,Telefonplan T-bana
+740021653,Metro,17,Alvik T-bana
+740021653,Metro,17,Hässelby Strand T-bana
+740021653,Metro,17,Odenplan T-bana
+740021653,Metro,17,Skarpnäck T-bana
+740021653,Metro,17,Vällingby T-bana
+740021653,Metro,17,Åkeshov T-bana
+740021653,Metro,18,Alvik T-bana
+740021653,Metro,18,Farsta Strand T-bana
+740021653,Metro,18,Hässelby Strand T-bana
+740021653,Metro,18,Hökarängen T-bana
+740021653,Metro,18,Odenplan T-bana
+740021653,Metro,18,Vällingby T-bana
+740021653,Metro,18,Åkeshov T-bana
+740021653,Metro,19,Alvik T-bana
+740021653,Metro,19,Gullmarsplan T-bana
+740021653,Metro,19,Hagsätra T-bana
+740021653,Metro,19,Hässelby Strand T-bana
+740021653,Metro,19,Högdalen T-bana
+740021653,Metro,19,Odenplan T-bana
+740021653,Metro,19,Rådmansgatan T-bana
+740021653,Metro,19,Vällingby T-bana
+740021653,Metro,19,Åkeshov T-bana
+740021654,Metro,17,Alvik T-bana
+740021654,Metro,17,Hässelby Strand T-bana
+740021654,Metro,17,Odenplan T-bana
+740021654,Metro,17,Skarpnäck T-bana
+740021654,Metro,17,Vällingby T-bana
+740021654,Metro,17,Åkeshov T-bana
+740021654,Metro,18,Alvik T-bana
+740021654,Metro,18,Farsta Strand T-bana
+740021654,Metro,18,Hässelby Strand T-bana
+740021654,Metro,18,Hökarängen T-bana
+740021654,Metro,18,Odenplan T-bana
+740021654,Metro,18,Vällingby T-bana
+740021654,Metro,18,Åkeshov T-bana
+740021654,Metro,19,Alvik T-bana
+740021654,Metro,19,Gullmarsplan T-bana
+740021654,Metro,19,Hagsätra T-bana
+740021654,Metro,19,Hässelby Strand T-bana
+740021654,Metro,19,Högdalen T-bana
+740021654,Metro,19,Odenplan T-bana
+740021654,Metro,19,Rådmansgatan T-bana
+740021654,Metro,19,Vällingby T-bana
+740021654,Metro,19,Åkeshov T-bana
+740021655,Bus,3,Gullmarsplan T-bana
+740021655,Bus,3,Karolinska sjukhuset norra
+740021655,Bus,3,Ljusterögatan
+740021655,Bus,3,Stockholm Glasbruksgatan
+740021655,Bus,3,Södersjukhuset
+740021655,Bus,4,Gullmarsplan T-bana
+740021655,Bus,4,Radiohuset
+740021655,Bus,55,Finnberget
+740021655,Bus,55,Henriksdalsberget
+740021655,Bus,55,Tanto
+740021655,Bus,57,Motalavägen
+740021655,Bus,57,Stockholm Tengdahlsgatan
+740021655,Bus,57,Tullgårdsparken
+740021655,Bus,66,Hornstull T-bana
+740021655,Bus,66,Stockholm Reimersholme
+740021655,Bus,66,Stockholm Tengdahlsgatan
+740021655,Bus,74,Fridhemsplan T-bana
+740021655,Bus,74,Moa Martinsons torg
+740021655,Bus,74,Sickla udde
+740021655,Bus,74,Södersjukhuset
+740021655,Metro,17,Alvik T-bana
+740021655,Metro,17,Hässelby Strand T-bana
+740021655,Metro,17,Odenplan T-bana
+740021655,Metro,17,Skarpnäck T-bana
+740021655,Metro,17,Vällingby T-bana
+740021655,Metro,17,Åkeshov T-bana
+740021655,Metro,18,Alvik T-bana
+740021655,Metro,18,Farsta Strand T-bana
+740021655,Metro,18,Hässelby Strand T-bana
+740021655,Metro,18,Hökarängen T-bana
+740021655,Metro,18,Odenplan T-bana
+740021655,Metro,18,Vällingby T-bana
+740021655,Metro,18,Åkeshov T-bana
+740021655,Metro,19,Alvik T-bana
+740021655,Metro,19,Gullmarsplan T-bana
+740021655,Metro,19,Hagsätra T-bana
+740021655,Metro,19,Hässelby Strand T-bana
+740021655,Metro,19,Högdalen T-bana
+740021655,Metro,19,Odenplan T-bana
+740021655,Metro,19,Rådmansgatan T-bana
+740021655,Metro,19,Vällingby T-bana
+740021655,Metro,19,Åkeshov T-bana
+740021656,Metro,13,Alby T-bana
+740021656,Metro,13,Axelsberg T-bana
+740021656,Metro,13,Norsborg T-bana
+740021656,Metro,13,Ropsten T-bana
+740021656,Metro,13,Sätra T-bana
+740021656,Metro,14,Fruängen T-bana
+740021656,Metro,14,Liljeholmen T-bana
+740021656,Metro,14,Mörby centrum T-bana
+740021656,Metro,14,Tekniska Högskolan T-bana
+740021656,Metro,14,Telefonplan T-bana
+740021657,Bus,4,Gullmarsplan T-bana
+740021657,Bus,4,Radiohuset
+740021657,Bus,66,Hornstull T-bana
+740021657,Bus,66,Stockholm Reimersholme
+740021657,Bus,66,Stockholm Tengdahlsgatan
+740021657,Bus,74,Fridhemsplan T-bana
+740021657,Bus,74,Moa Martinsons torg
+740021657,Bus,74,Sickla udde
+740021657,Metro,13,Alby T-bana
+740021657,Metro,13,Axelsberg T-bana
+740021657,Metro,13,Norsborg T-bana
+740021657,Metro,13,Ropsten T-bana
+740021657,Metro,13,Sätra T-bana
+740021657,Metro,14,Fruängen T-bana
+740021657,Metro,14,Liljeholmen T-bana
+740021657,Metro,14,Mörby centrum T-bana
+740021657,Metro,14,Tekniska Högskolan T-bana
+740021657,Metro,14,Telefonplan T-bana
+740021658,Bus,4,Gullmarsplan T-bana
+740021658,Bus,4,Radiohuset
+740021658,Bus,54,Fridhemsplan T-bana
+740021658,Bus,54,Hornstull T-bana
+740021658,Bus,54,Stockholm Reimersholme
+740021658,Bus,66,Hornstull T-bana
+740021658,Bus,66,Stockholm Reimersholme
+740021658,Bus,66,Stockholm Tengdahlsgatan
+740021658,Bus,74,Fridhemsplan T-bana
+740021658,Bus,74,Moa Martinsons torg
+740021658,Bus,74,Sickla udde
+740021658,Metro,13,Alby T-bana
+740021658,Metro,13,Axelsberg T-bana
+740021658,Metro,13,Norsborg T-bana
+740021658,Metro,13,Ropsten T-bana
+740021658,Metro,13,Sätra T-bana
+740021658,Metro,14,Fruängen T-bana
+740021658,Metro,14,Liljeholmen T-bana
+740021658,Metro,14,Mörby centrum T-bana
+740021658,Metro,14,Tekniska Högskolan T-bana
+740021658,Metro,14,Telefonplan T-bana
+740021659,Metro,10,Hjulsta T-bana
+740021659,Metro,10,Kungsträdgården T-bana
+740021659,Metro,11,Akalla T-bana
+740021659,Metro,11,Kungsträdgården T-bana
+740021660,Metro,10,Hjulsta T-bana
+740021660,Metro,10,Kungsträdgården T-bana
+740021660,Metro,10,T-Centralen T-bana
+740021660,Metro,11,Akalla T-bana
+740021660,Metro,11,Kungsträdgården T-bana
+740021660,Metro,11,T-Centralen T-bana
+740021661,Bus,1,Essingetorget
+740021661,Bus,1,Stockholm Frihamnen
+740021661,Bus,3,Fridhemsplan T-bana
+740021661,Bus,3,Karolinska sjukhuset norra
+740021661,Bus,4,Gullmarsplan T-bana
+740021661,Bus,4,Radiohuset
+740021661,Bus,54,Fridhemsplan T-bana
+740021661,Bus,54,Hornstull T-bana
+740021661,Bus,54,Stockholm Reimersholme
+740021661,Bus,61,Fredhäll
+740021661,Bus,61,Moa Martinsons torg
+740021661,Bus,61,Ruddammen
+740021661,Bus,74,Fridhemsplan T-bana
+740021661,Bus,74,Sickla udde
+740021661,Metro,10,Hjulsta T-bana
+740021661,Metro,10,Kungsträdgården T-bana
+740021661,Metro,10,T-Centralen T-bana
+740021661,Metro,11,Akalla T-bana
+740021661,Metro,11,Kungsträdgården T-bana
+740021661,Metro,11,T-Centralen T-bana
+740021661,Metro,17,Alvik T-bana
+740021661,Metro,17,Hässelby Strand T-bana
+740021661,Metro,17,Skarpnäck T-bana
+740021661,Metro,17,Vällingby T-bana
+740021661,Metro,17,Åkeshov T-bana
+740021661,Metro,18,Alvik T-bana
+740021661,Metro,18,Farsta Strand T-bana
+740021661,Metro,18,Hässelby Strand T-bana
+740021661,Metro,18,Hökarängen T-bana
+740021661,Metro,18,Vällingby T-bana
+740021661,Metro,18,Åkeshov T-bana
+740021661,Metro,19,Alvik T-bana
+740021661,Metro,19,Gullmarsplan T-bana
+740021661,Metro,19,Hagsätra T-bana
+740021661,Metro,19,Hässelby Strand T-bana
+740021661,Metro,19,Högdalen T-bana
+740021661,Metro,19,S:t Eriksplan T-bana
+740021661,Metro,19,Vällingby T-bana
+740021661,Metro,19,Åkeshov T-bana
+740021662,Metro,10,Hjulsta T-bana
+740021662,Metro,10,Kungsträdgården T-bana
+740021662,Metro,10,T-Centralen T-bana
+740021662,Metro,11,Akalla T-bana
+740021662,Metro,11,Kungsträdgården T-bana
+740021662,Metro,11,T-Centralen T-bana
+740021663,Bus,61,Moa Martinsons torg
+740021663,Bus,61,Ruddammen
+740021663,Metro,17,Alvik T-bana
+740021663,Metro,17,Hässelby Strand T-bana
+740021663,Metro,17,Skarpnäck T-bana
+740021663,Metro,17,Vällingby T-bana
+740021663,Metro,17,Åkeshov T-bana
+740021663,Metro,18,Alvik T-bana
+740021663,Metro,18,Farsta Strand T-bana
+740021663,Metro,18,Hässelby Strand T-bana
+740021663,Metro,18,Hökarängen T-bana
+740021663,Metro,18,Vällingby T-bana
+740021663,Metro,18,Åkeshov T-bana
+740021663,Metro,19,Alvik T-bana
+740021663,Metro,19,Gullmarsplan T-bana
+740021663,Metro,19,Hagsätra T-bana
+740021663,Metro,19,Hässelby Strand T-bana
+740021663,Metro,19,Högdalen T-bana
+740021663,Metro,19,S:t Eriksplan T-bana
+740021663,Metro,19,Vällingby T-bana
+740021663,Metro,19,Åkeshov T-bana
+740021664,Metro,17,Alvik T-bana
+740021664,Metro,17,Hässelby Strand T-bana
+740021664,Metro,17,Skarpnäck T-bana
+740021664,Metro,17,Vällingby T-bana
+740021664,Metro,17,Åkeshov T-bana
+740021664,Metro,18,Alvik T-bana
+740021664,Metro,18,Farsta Strand T-bana
+740021664,Metro,18,Hässelby Strand T-bana
+740021664,Metro,18,Hökarängen T-bana
+740021664,Metro,18,Vällingby T-bana
+740021664,Metro,18,Åkeshov T-bana
+740021664,Metro,19,Alvik T-bana
+740021664,Metro,19,Gullmarsplan T-bana
+740021664,Metro,19,Hagsätra T-bana
+740021664,Metro,19,Hässelby Strand T-bana
+740021664,Metro,19,Högdalen T-bana
+740021664,Metro,19,S:t Eriksplan T-bana
+740021664,Metro,19,Vällingby T-bana
+740021664,Metro,19,Åkeshov T-bana
+740021665,Bus,1,Essingetorget
+740021665,Bus,1,Stockholm Frihamnen
+740021665,Bus,3,Fridhemsplan T-bana
+740021665,Bus,3,Karolinska sjukhuset norra
+740021665,Bus,3,Slussen T-bana
+740021665,Bus,3,Södersjukhuset
+740021665,Bus,4,Gullmarsplan T-bana
+740021665,Bus,4,Radiohuset
+740021665,Bus,61,Fredhäll
+740021665,Bus,61,Moa Martinsons torg
+740021665,Bus,61,Ruddammen
+740021665,Metro,17,Alvik T-bana
+740021665,Metro,17,Hässelby Strand T-bana
+740021665,Metro,17,Skarpnäck T-bana
+740021665,Metro,17,Vällingby T-bana
+740021665,Metro,17,Åkeshov T-bana
+740021665,Metro,18,Alvik T-bana
+740021665,Metro,18,Farsta Strand T-bana
+740021665,Metro,18,Hässelby Strand T-bana
+740021665,Metro,18,Hökarängen T-bana
+740021665,Metro,18,Vällingby T-bana
+740021665,Metro,18,Åkeshov T-bana
+740021665,Metro,19,Alvik T-bana
+740021665,Metro,19,Gullmarsplan T-bana
+740021665,Metro,19,Hagsätra T-bana
+740021665,Metro,19,Hässelby Strand T-bana
+740021665,Metro,19,Högdalen T-bana
+740021665,Metro,19,S:t Eriksplan T-bana
+740021665,Metro,19,Vällingby T-bana
+740021665,Metro,19,Åkeshov T-bana
+740021666,Metro,17,Alvik T-bana
+740021666,Metro,17,Hässelby Strand T-bana
+740021666,Metro,17,Odenplan T-bana
+740021666,Metro,17,Skarpnäck T-bana
+740021666,Metro,17,Vällingby T-bana
+740021666,Metro,17,Åkeshov T-bana
+740021666,Metro,18,Alvik T-bana
+740021666,Metro,18,Farsta Strand T-bana
+740021666,Metro,18,Hässelby Strand T-bana
+740021666,Metro,18,Hökarängen T-bana
+740021666,Metro,18,Odenplan T-bana
+740021666,Metro,18,Vällingby T-bana
+740021666,Metro,18,Åkeshov T-bana
+740021666,Metro,19,Alvik T-bana
+740021666,Metro,19,Gullmarsplan T-bana
+740021666,Metro,19,Hagsätra T-bana
+740021666,Metro,19,Hässelby Strand T-bana
+740021666,Metro,19,Högdalen T-bana
+740021666,Metro,19,Odenplan T-bana
+740021666,Metro,19,Rådmansgatan T-bana
+740021666,Metro,19,Vällingby T-bana
+740021666,Metro,19,Åkeshov T-bana
+740021667,Bus,1,Essingetorget
+740021667,Bus,1,Stockholm Frihamnen
+740021667,Bus,75,Ropsten T-bana
+740021667,Bus,75,Stockholm Citytermin Kungsbron
+740021667,Metro,17,Alvik T-bana
+740021667,Metro,17,Hässelby Strand T-bana
+740021667,Metro,17,Odenplan T-bana
+740021667,Metro,17,Skarpnäck T-bana
+740021667,Metro,17,Vällingby T-bana
+740021667,Metro,17,Åkeshov T-bana
+740021667,Metro,18,Alvik T-bana
+740021667,Metro,18,Farsta Strand T-bana
+740021667,Metro,18,Hässelby Strand T-bana
+740021667,Metro,18,Hökarängen T-bana
+740021667,Metro,18,Odenplan T-bana
+740021667,Metro,18,Vällingby T-bana
+740021667,Metro,18,Åkeshov T-bana
+740021667,Metro,19,Alvik T-bana
+740021667,Metro,19,Gullmarsplan T-bana
+740021667,Metro,19,Hagsätra T-bana
+740021667,Metro,19,Hässelby Strand T-bana
+740021667,Metro,19,Högdalen T-bana
+740021667,Metro,19,Odenplan T-bana
+740021667,Metro,19,Rådmansgatan T-bana
+740021667,Metro,19,Vällingby T-bana
+740021667,Metro,19,Åkeshov T-bana
+740021669,Metro,10,Hjulsta T-bana
+740021669,Metro,10,Kungsträdgården T-bana
+740021669,Metro,10,T-Centralen T-bana
+740021669,Metro,11,Akalla T-bana
+740021669,Metro,11,Kungsträdgården T-bana
+740021669,Metro,11,T-Centralen T-bana
+740021715,Metro,14,Fruängen T-bana
+740021715,Metro,14,Mörby centrum T-bana
+740021715,Metro,14,Telefonplan T-bana
+740021720,Metro,13,Alby T-bana
+740021720,Metro,13,Axelsberg T-bana
+740021720,Metro,13,Norsborg T-bana
+740021720,Metro,13,Ropsten T-bana
+740021720,Metro,13,Sätra T-bana
+740021720,Metro,14,Tekniska Högskolan T-bana
+740023844,Bus,2,Stockholm Barnängen
+740023844,Bus,53,Henriksdalsberget
+740023844,Bus,53,Slussen T-bana
+740024806,Bus,55,Finnberget
+740024806,Bus,55,Henriksdalsberget
+740024806,Bus,55,Stockholm Ersta sjukhus
+740024806,Bus,55,Tanto
+740024921,Tram,30,Bällsta bro Spårv
+740024921,Tram,30,Johannesfred Spårv
+740024921,Tram,30,Sickla station
+740024921,Tram,30,Solna station
+740024922,Tram,30,Bällsta bro Spårv
+740024922,Tram,30,Johannesfred Spårv
+740024922,Tram,30,Sickla station
+740024922,Tram,30,Solna station
+740024923,Tram,30,Bällsta bro Spårv
+740024923,Tram,30,Johannesfred Spårv
+740024923,Tram,30,Sickla station
+740024923,Tram,30,Solna station
+740024926,Bus,74,Fridhemsplan T-bana
+740024926,Bus,74,Moa Martinsons torg
+740024926,Bus,74,Sickla udde
+740024926,Bus,74,Södersjukhuset
+740024926,Tram,30,Bällsta bro Spårv
+740024926,Tram,30,Johannesfred Spårv
+740024926,Tram,30,Sickla station
+740024926,Tram,30,Solna station
+740024927,Bus,53,Stockholm Sickla udde
+740024927,Bus,74,Fridhemsplan T-bana
+740024927,Bus,74,Moa Martinsons torg
+740024927,Bus,74,Södersjukhuset
+740024927,Tram,30,Bällsta bro Spårv
+740024927,Tram,30,Johannesfred Spårv
+740024927,Tram,30,Sickla station
+740024927,Tram,30,Solna station
+740024928,Bus,74,Fridhemsplan T-bana
+740024928,Bus,74,Moa Martinsons torg
+740024928,Bus,74,Sickla udde
+740024928,Bus,74,Södersjukhuset
+740024928,Tram,30,Bällsta bro Spårv
+740024928,Tram,30,Johannesfred Spårv
+740024928,Tram,30,Sickla station
+740024928,Tram,30,Solna station
+740024929,Bus,74,Fridhemsplan T-bana
+740024929,Bus,74,Moa Martinsons torg
+740024929,Bus,74,Sickla udde
+740024929,Bus,74,Södersjukhuset
+740024929,Tram,30,Bällsta bro Spårv
+740024929,Tram,30,Johannesfred Spårv
+740024929,Tram,30,Sickla station
+740024929,Tram,30,Solna station
+740034484,Ferry,80,Stockholm Nybrokajen
+740034484,Ferry,80,Stockholm Ropsten brygga
+740034743,Ferry,80,Nacka strand Sjövägen
+740034743,Ferry,80,Stockholm Nybrokajen
+740034743,Ferry,80,Stockholm Ropsten brygga
+740034770,Ferry,80,Nacka strand Sjövägen
+740034770,Ferry,80,Stockholm Nybrokajen
+740034770,Ferry,80,Stockholm Ropsten brygga
+740034770,Ferry,80X,Nacka strand Sjövägen
+740034770,Ferry,80X,Stockholm Nybrokajen
+740037355,Bus,2,Slussen T-bana
+740037355,Bus,2,Stockholm Barnängen
+740037355,Bus,57,Slussen T-bana
+740037355,Bus,57,Stockholm Tengdahlsgatan
+740037355,Bus,57,Tullgårdsparken
+740037355,Bus,65,Stockholm Kastellholmsbron
+740037355,Bus,65,Stockholm Nationalmuseum
+740037355,Bus,69,Djurgårdsbrunn
+740037355,Bus,69,Stockholm Blockhusudden
+740037355,Bus,69,Stockholm C Klarabergsviadukte
+740037355,Bus,76,Ljusterögatan
+740037355,Bus,76,Slussen T-bana
+740037355,Tram,7,Stockholm Skansen
+740037355,Tram,7,Stockholm Waldemarsudde
+740037355,Tram,7,T-Centralen Spårv
+740038313,Bus,53,Henriksdalsberget
+740038313,Bus,74,Sickla udde
+740039043,Bus,55,Finnberget
+740039043,Bus,55,Henriksdalsberget
+740039043,Bus,55,Tanto
+740039043,Bus,57,Motalavägen
+740039043,Bus,57,Stockholm Tengdahlsgatan
+740039043,Bus,57,Tullgårdsparken
+740045261,Bus,61,Moa Martinsons torg
+740045261,Bus,61,Ruddammen
+740045277,Bus,4,Gullmarsplan T-bana
+740045277,Bus,4,Radiohuset
+740045277,Bus,57,Motalavägen
+740045277,Bus,57,Tekniska Högskolan T-bana
+740045277,Bus,72,Karolinska sjukhuset norra
+740045277,Bus,72,Östhammarsgatan
+740045404,Bus,65,Moa Martinsons torg
+740045404,Bus,65,Stockholm Kastellholmsbron
+740045457,Bus,65,Moa Martinsons torg
+740045457,Bus,65,Stockholm Kastellholmsbron
+740045460,Bus,65,Moa Martinsons torg
+740045460,Bus,65,Stockholm Kastellholmsbron
+740045461,Bus,2,Slussen T-bana
+740045461,Bus,2,Stockholm Barnängen
+740045461,Bus,57,Slussen T-bana
+740045461,Bus,57,Stockholm Tengdahlsgatan
+740045461,Bus,57,Tullgårdsparken
+740045461,Bus,65,Moa Martinsons torg
+740045461,Bus,65,Stockholm Kastellholmsbron
+740045461,Bus,65,Stockholm Nationalmuseum
+740045461,Bus,76,Ljusterögatan
+740045461,Bus,76,Slussen T-bana
+740045462,Bus,4,Gullmarsplan T-bana
+740045462,Bus,4,Radiohuset
+740045462,Bus,66,Hornstull T-bana
+740045462,Bus,66,Stockholm Reimersholme
+740045462,Bus,66,Stockholm Tengdahlsgatan
+740045462,Bus,74,Fridhemsplan T-bana
+740045462,Bus,74,Moa Martinsons torg
+740045462,Bus,74,Sickla udde
+740045463,Bus,55,Finnberget
+740045463,Bus,55,Henriksdalsberget
+740045463,Bus,55,Tanto
+740045463,Bus,57,Motalavägen
+740045463,Bus,57,Stockholm Tengdahlsgatan
+740045463,Bus,57,Tullgårdsparken
+740045463,Bus,66,Stockholm Reimersholme
+740045463,Bus,66,Stockholm Tengdahlsgatan
+740045464,Bus,57,Motalavägen
+740045464,Bus,57,Slussen T-bana
+740045464,Bus,57,Stockholm Tengdahlsgatan
+740045464,Bus,57,Tullgårdsparken
+740045465,Bus,1,Essingetorget
+740045465,Bus,1,Stockholm Frihamnen
+740045465,Bus,2,Humlegården
+740045465,Bus,2,Slussen T-bana
+740045465,Bus,2,Stockholm Barnängen
+740045465,Bus,2,Ynglingagatan
+740045465,Bus,57,Motalavägen
+740045465,Bus,57,Stockholm Tengdahlsgatan
+740045465,Bus,75,Ropsten T-bana
+740045465,Bus,75,Stockholm Citytermin Kungsbron
+740045586,Bus,67,Frösundavik
+740045586,Bus,67,Karlaplan T-bana
+740045586,Bus,67,Stockholm Blockhusudden
+740045943,Tram,7,Stockholm Norrmalmstorg Spårv
+740045943,Tram,7,Stockholm Waldemarsudde
+740045952,Bus,1,Essingetorget
+740045952,Bus,1,Stockholm Frihamnen
+740045953,Bus,76,Ropsten T-bana
+740045954,Bus,1,Essingetorget
+740045954,Bus,1,Stockholm Frihamnen
+740045954,Bus,65,Moa Martinsons torg
+740045954,Bus,65,Scheelegatan
+740045954,Bus,65,Stockholm Kastellholmsbron
+740045954,Bus,65,Stockholm Nationalmuseum
+740045955,Bus,1,Essingetorget
+740045955,Bus,1,Stockholm Frihamnen
+740045955,Bus,65,Moa Martinsons torg
+740045955,Bus,65,Scheelegatan
+740045956,Bus,1,Essingetorget
+740045956,Bus,65,Moa Martinsons torg
+740045957,Bus,61,Fredhäll
+740045957,Bus,61,Moa Martinsons torg
+740045957,Bus,61,Ruddammen
+740045960,Bus,1,Stockholm Frihamnen
+740045960,Bus,57,Motalavägen
+740045960,Bus,75,Ropsten T-bana
+740045961,Bus,1,Essingetorget
+740045961,Bus,1,Stockholm Frihamnen
+740045961,Bus,57,Motalavägen
+740045961,Bus,57,Stockholm Tengdahlsgatan
+740045961,Bus,67,Frösundavik
+740045961,Bus,67,Karlaplan T-bana
+740045961,Bus,67,Odenplan T-bana
+740045961,Bus,67,Stockholm Blockhusudden
+740045961,Bus,67,Stockholm Skansen
+740045961,Bus,75,Ropsten T-bana
+740045961,Bus,75,Stockholm Citytermin Kungsbron
+740045962,Bus,61,Fredhäll
+740045962,Bus,61,Moa Martinsons torg
+740045962,Bus,61,Ruddammen
+740045963,Bus,1,Essingetorget
+740045963,Bus,1,Stockholm Frihamnen
+740045963,Bus,57,Motalavägen
+740045963,Bus,57,Stockholm Tengdahlsgatan
+740045963,Bus,67,Frösundavik
+740045963,Bus,67,Karlaplan T-bana
+740045963,Bus,67,Odenplan T-bana
+740045963,Bus,67,Stockholm Blockhusudden
+740045963,Bus,67,Stockholm Skansen
+740045964,Bus,1,Essingetorget
+740045964,Bus,1,Stockholm Frihamnen
+740045964,Bus,57,Motalavägen
+740045964,Bus,57,Slussen T-bana
+740045964,Bus,57,Stockholm Tengdahlsgatan
+740045964,Bus,57,Tekniska Högskolan T-bana
+740045964,Bus,57,Tullgårdsparken
+740045964,Bus,72,Karolinska sjukhuset norra
+740045964,Bus,72,Östhammarsgatan
+740045965,Bus,57,Slussen T-bana
+740045965,Bus,57,Stockholm Tengdahlsgatan
+740045965,Bus,57,Tekniska Högskolan T-bana
+740045965,Bus,57,Tullgårdsparken
+740045966,Bus,67,Frösundavik
+740045966,Bus,67,Karlaplan T-bana
+740045966,Bus,67,Odenplan T-bana
+740045966,Bus,67,Stockholm Blockhusudden
+740045966,Bus,67,Stockholm Skansen
+740045967,Bus,1,Essingetorget
+740045967,Bus,1,Stockholm Frihamnen
+740045967,Bus,4,Gullmarsplan T-bana
+740045967,Bus,4,Radiohuset
+740045967,Bus,72,Karolinska sjukhuset norra
+740045967,Bus,72,Östhammarsgatan
+740045968,Bus,72,Karolinska sjukhuset norra
+740045968,Bus,72,Östhammarsgatan
+740045968,Bus,76,Karlaplan T-bana
+740045968,Bus,76,Ropsten T-bana
+740045969,Bus,69,Stockholm Blockhusudden
+740045969,Bus,76,Karlaplan T-bana
+740045969,Bus,76,Ljusterögatan
+740045969,Bus,76,Slussen T-bana
+740045970,Bus,72,Karolinska sjukhuset norra
+740045970,Bus,72,Östhammarsgatan
+740045970,Bus,76,Karlaplan T-bana
+740045970,Bus,76,Ljusterögatan
+740045970,Bus,76,Ropsten T-bana
+740045970,Bus,76,Slussen T-bana
+740045970,Bus,76,Stockholm Frihamnen
+740045971,Bus,72,Karolinska sjukhuset norra
+740045971,Bus,72,Östhammarsgatan
+740045971,Bus,76,Karlaplan T-bana
+740045971,Bus,76,Ljusterögatan
+740045971,Bus,76,Ropsten T-bana
+740045971,Bus,76,Slussen T-bana
+740045971,Bus,76,Stockholm Frihamnen
+740045972,Bus,1,Essingetorget
+740045972,Bus,1,Stockholm Frihamnen
+740045972,Bus,72,Karolinska sjukhuset norra
+740045972,Bus,72,Östhammarsgatan
+740045972,Bus,76,Karlaplan T-bana
+740045972,Bus,76,Ljusterögatan
+740045972,Bus,76,Ropsten T-bana
+740045972,Bus,76,Slussen T-bana
+740045972,Bus,76,Stockholm Frihamnen
+740045973,Bus,1,Essingetorget
+740045973,Bus,1,Stockholm Frihamnen
+740045973,Bus,72,Karolinska sjukhuset norra
+740045973,Bus,72,Östhammarsgatan
+740045974,Bus,1,Essingetorget
+740045974,Bus,1,Stockholm Frihamnen
+740045974,Bus,72,Karolinska sjukhuset norra
+740045974,Bus,72,Östhammarsgatan
+740045975,Bus,1,Essingetorget
+740045975,Bus,1,Stockholm Frihamnen
+740045976,Bus,1,Essingetorget
+740045976,Bus,1,Stockholm Frihamnen
+740045980,Bus,65,Moa Martinsons torg
+740045980,Bus,65,Scheelegatan
+740045980,Bus,65,Stockholm Kastellholmsbron
+740045980,Bus,65,Stockholm Nationalmuseum
+740045981,Bus,65,Moa Martinsons torg
+740045981,Bus,65,Scheelegatan
+740045981,Bus,65,Stockholm Kastellholmsbron
+740045981,Bus,65,Stockholm Nationalmuseum
+740045983,Bus,65,Moa Martinsons torg
+740045983,Bus,65,Scheelegatan
+740045983,Bus,65,Stockholm Kastellholmsbron
+740045983,Bus,65,Stockholm Nationalmuseum
+740045984,Bus,65,Moa Martinsons torg
+740045984,Bus,65,Scheelegatan
+740045984,Bus,65,Stockholm Kastellholmsbron
+740045984,Bus,65,Stockholm Nationalmuseum
+740045985,Bus,65,Moa Martinsons torg
+740045985,Bus,65,Scheelegatan
+740045985,Bus,65,Stockholm Kastellholmsbron
+740045985,Bus,65,Stockholm Nationalmuseum
+740045989,Bus,67,Frösundavik
+740045989,Bus,67,Odenplan T-bana
+740045989,Bus,67,Stockholm Blockhusudden
+740045989,Bus,67,Stockholm Skansen
+740045989,Bus,69,Djurgårdsbrunn
+740045989,Bus,69,Karlaplan T-bana
+740045989,Bus,76,Karlaplan T-bana
+740045989,Bus,76,Ropsten T-bana
+740045991,Bus,69,Djurgårdsbrunn
+740045991,Bus,69,Karlaplan T-bana
+740045991,Bus,69,Stockholm Blockhusudden
+740045991,Bus,69,Stockholm C Klarabergsviadukte
+740045991,Bus,76,Karlaplan T-bana
+740045991,Bus,76,Ljusterögatan
+740045991,Bus,76,Ropsten T-bana
+740045991,Bus,76,Slussen T-bana
+740045991,Bus,76,Stockholm Frihamnen
+740045992,Bus,4,Gullmarsplan T-bana
+740045992,Bus,4,Radiohuset
+740045992,Bus,69,Karlaplan T-bana
+740045992,Bus,69,Stockholm Blockhusudden
+740045992,Bus,76,Karlaplan T-bana
+740045992,Bus,76,Ljusterögatan
+740045992,Bus,76,Ropsten T-bana
+740045992,Bus,76,Slussen T-bana
+740045992,Bus,76,Stockholm Frihamnen
+740045994,Bus,2,Ynglingagatan
+740045995,Bus,50,Lektorsstigen
+740045995,Bus,50,Odenplan T-bana
+740045995,Bus,50,Universitetet T-bana
+740045996,Bus,50,Lektorsstigen
+740045996,Bus,50,Odenplan T-bana
+740045996,Bus,50,Universitetet T-bana
+740045997,Bus,2,Humlegården
+740045997,Bus,2,Slussen T-bana
+740045997,Bus,2,Stockholm Barnängen
+740045997,Bus,2,Ynglingagatan
+740045999,Bus,2,Humlegården
+740045999,Bus,2,Slussen T-bana
+740045999,Bus,2,Stockholm Barnängen
+740045999,Bus,2,Ynglingagatan
+740046000,Bus,2,Humlegården
+740046000,Bus,2,Slussen T-bana
+740046000,Bus,2,Stockholm Barnängen
+740046000,Bus,2,Ynglingagatan
+740046002,Bus,2,Slussen T-bana
+740046002,Bus,2,Stockholm Barnängen
+740046002,Bus,2,Ynglingagatan
+740046002,Bus,57,Motalavägen
+740046002,Bus,57,Slussen T-bana
+740046002,Bus,57,Stockholm Tengdahlsgatan
+740046002,Bus,57,Tullgårdsparken
+740046002,Bus,76,Ljusterögatan
+740046002,Bus,76,Ropsten T-bana
+740046002,Bus,76,Slussen T-bana
+740046002,Bus,76,Stockholm Frihamnen
+740046005,Bus,55,Finnberget
+740046005,Bus,55,Henriksdalsberget
+740046005,Bus,55,Tanto
+740046006,Bus,55,Finnberget
+740046006,Bus,55,Henriksdalsberget
+740046006,Bus,55,Tanto
+740046006,Bus,57,Motalavägen
+740046006,Bus,57,Stockholm Tengdahlsgatan
+740046006,Bus,57,Tullgårdsparken
+740046006,Bus,66,Hornstull T-bana
+740046006,Bus,66,Stockholm Reimersholme
+740046006,Bus,66,Stockholm Tengdahlsgatan
+740046007,Bus,3,Gullmarsplan T-bana
+740046007,Bus,3,Karolinska sjukhuset norra
+740046007,Bus,3,Ljusterögatan
+740046007,Bus,3,Stockholm Glasbruksgatan
+740046007,Bus,3,Södersjukhuset
+740046007,Bus,4,Gullmarsplan T-bana
+740046007,Bus,4,Radiohuset
+740046007,Bus,55,Finnberget
+740046007,Bus,55,Henriksdalsberget
+740046007,Bus,55,Tanto
+740046007,Bus,74,Fridhemsplan T-bana
+740046007,Bus,74,Moa Martinsons torg
+740046007,Bus,74,Sickla udde
+740046007,Bus,74,Södersjukhuset
+740046008,Bus,55,Finnberget
+740046008,Bus,55,Henriksdalsberget
+740046008,Bus,55,Tanto
+740046009,Bus,55,Finnberget
+740046009,Bus,55,Henriksdalsberget
+740046009,Bus,55,Tanto
+740046009,Bus,57,Motalavägen
+740046009,Bus,57,Stockholm Tengdahlsgatan
+740046009,Bus,57,Tullgårdsparken
+740046009,Bus,66,Hornstull T-bana
+740046009,Bus,66,Stockholm Reimersholme
+740046009,Bus,66,Stockholm Tengdahlsgatan
+740046010,Bus,55,Finnberget
+740046010,Bus,55,Henriksdalsberget
+740046010,Bus,55,Tanto
+740046011,Bus,1,Essingetorget
+740046011,Bus,1,Stockholm Frihamnen
+740046012,Bus,1,Essingetorget
+740046012,Bus,1,Stockholm Frihamnen
+740046019,Bus,65,Moa Martinsons torg
+740046019,Bus,65,Stockholm Kastellholmsbron
+740046021,Bus,53,Henriksdalsberget
+740046021,Bus,53,Karolinska institutet västra
+740046021,Bus,53,Odenplan T-bana
+740046021,Bus,53,Slussen T-bana
+740046021,Bus,72,Karolinska sjukhuset norra
+740046021,Bus,72,Östhammarsgatan
+740046022,Bus,3,Fridhemsplan T-bana
+740046022,Bus,3,Karolinska sjukhuset norra
+740046022,Bus,3,Slussen T-bana
+740046022,Bus,3,Södersjukhuset
+740046022,Bus,67,Frösundavik
+740046023,Bus,53,Henriksdalsberget
+740046023,Bus,53,Karolinska institutet västra
+740046023,Bus,53,Odenplan T-bana
+740046023,Bus,53,Slussen T-bana
+740046023,Bus,67,Karlaplan T-bana
+740046023,Bus,67,Stockholm Blockhusudden
+740046023,Bus,72,Karolinska sjukhuset norra
+740046023,Bus,72,Östhammarsgatan
+740046024,Bus,53,Henriksdalsberget
+740046024,Bus,53,Karolinska institutet västra
+740046024,Bus,53,Odenplan T-bana
+740046024,Bus,53,Slussen T-bana
+740046024,Bus,72,Karolinska sjukhuset norra
+740046025,Bus,1,Essingetorget
+740046025,Bus,1,Stockholm Frihamnen
+740046025,Bus,4,Gullmarsplan T-bana
+740046025,Bus,4,Radiohuset
+740046025,Bus,61,Fredhäll
+740046025,Bus,61,Moa Martinsons torg
+740046025,Bus,61,Ruddammen
+740046025,Bus,67,Frösundavik
+740046026,Bus,1,Essingetorget
+740046026,Bus,1,Stockholm Frihamnen
+740046026,Bus,2,Humlegården
+740046026,Bus,2,Slussen T-bana
+740046026,Bus,2,Stockholm Barnängen
+740046026,Bus,2,Ynglingagatan
+740046026,Bus,4,Gullmarsplan T-bana
+740046026,Bus,4,Radiohuset
+740046026,Bus,50,Lektorsstigen
+740046026,Bus,50,Odenplan T-bana
+740046026,Bus,50,Universitetet T-bana
+740046026,Bus,61,Fredhäll
+740046026,Bus,61,Moa Martinsons torg
+740046026,Bus,61,Ruddammen
+740046026,Bus,67,Frösundavik
+740046026,Bus,67,Karlaplan T-bana
+740046026,Bus,67,Odenplan T-bana
+740046026,Bus,67,Stockholm Blockhusudden
+740046026,Bus,67,Stockholm Skansen
+740046026,Bus,72,Karolinska sjukhuset norra
+740046026,Bus,72,Östhammarsgatan
+740046027,Bus,1,Essingetorget
+740046027,Bus,1,Stockholm Frihamnen
+740046027,Bus,2,Ynglingagatan
+740046027,Bus,4,Gullmarsplan T-bana
+740046027,Bus,4,Radiohuset
+740046027,Bus,50,Odenplan T-bana
+740046027,Bus,61,Fredhäll
+740046027,Bus,61,Moa Martinsons torg
+740046027,Bus,61,Ruddammen
+740046027,Bus,67,Frösundavik
+740046027,Bus,67,Karlaplan T-bana
+740046027,Bus,67,Odenplan T-bana
+740046027,Bus,67,Stockholm Blockhusudden
+740046027,Bus,67,Stockholm Skansen
+740046027,Bus,72,Karolinska sjukhuset norra
+740046027,Bus,72,Östhammarsgatan
+740046028,Bus,4,Gullmarsplan T-bana
+740046028,Bus,61,Fredhäll
+740046028,Bus,61,Moa Martinsons torg
+740046028,Bus,67,Frösundavik
+740046028,Bus,67,Odenplan T-bana
+740046028,Bus,72,Karolinska sjukhuset norra
+740046029,Bus,4,Radiohuset
+740046029,Bus,61,Ruddammen
+740046029,Bus,67,Karlaplan T-bana
+740046029,Bus,67,Stockholm Blockhusudden
+740046029,Bus,67,Stockholm Skansen
+740046029,Bus,72,Östhammarsgatan
+740046031,Bus,67,Frösundavik
+740046031,Bus,67,Odenplan T-bana
+740046031,Bus,67,Stockholm Blockhusudden
+740046031,Bus,67,Stockholm Skansen
+740046031,Tram,7,Stockholm Norrmalmstorg Spårv
+740046031,Tram,7,Stockholm Skansen
+740046031,Tram,7,Stockholm Waldemarsudde
+740046031,Tram,7,T-Centralen Spårv
+740046032,Bus,4,Gullmarsplan T-bana
+740046032,Bus,4,Radiohuset
+740046032,Bus,69,Karlaplan T-bana
+740046032,Bus,69,Stockholm Blockhusudden
+740046032,Bus,76,Karlaplan T-bana
+740046032,Bus,76,Ropsten T-bana
+740046033,Bus,57,Motalavägen
+740046033,Bus,57,Slussen T-bana
+740046033,Bus,57,Stockholm Tengdahlsgatan
+740046033,Bus,57,Tullgårdsparken
+740046034,Bus,67,Frösundavik
+740046034,Bus,67,Odenplan T-bana
+740046034,Bus,67,Stockholm Blockhusudden
+740046034,Bus,67,Stockholm Skansen
+740046034,Bus,69,Djurgårdsbrunn
+740046034,Bus,69,Karlaplan T-bana
+740046034,Bus,76,Karlaplan T-bana
+740046034,Bus,76,Ropsten T-bana
+740046036,Bus,69,Djurgårdsbrunn
+740046036,Bus,69,Stockholm Blockhusudden
+740046036,Bus,69,Stockholm C Klarabergsviadukte
+740046036,Bus,76,Ljusterögatan
+740046036,Bus,76,Ropsten T-bana
+740046036,Bus,76,Slussen T-bana
+740046036,Bus,76,Stockholm Frihamnen
+740046036,Tram,7,Stockholm Norrmalmstorg Spårv
+740046036,Tram,7,Stockholm Skansen
+740046036,Tram,7,Stockholm Waldemarsudde
+740046036,Tram,7,T-Centralen Spårv
+740046037,Bus,2,Stockholm Barnängen
+740046037,Bus,2,Stockholm Sveaplan
+740046038,Bus,2,Humlegården
+740046038,Bus,2,Slussen T-bana
+740046038,Bus,2,Stockholm Barnängen
+740046038,Bus,2,Stockholm Sveaplan
+740046038,Bus,2,Ynglingagatan
+740046039,Bus,2,Humlegården
+740046039,Bus,2,Slussen T-bana
+740046039,Bus,2,Stockholm Barnängen
+740046039,Bus,2,Stockholm Sveaplan
+740046039,Bus,2,Ynglingagatan
+740046040,Bus,2,Humlegården
+740046040,Bus,2,Slussen T-bana
+740046040,Bus,2,Stockholm Barnängen
+740046040,Bus,2,Stockholm Sveaplan
+740046040,Bus,2,Ynglingagatan
+740046041,Bus,2,Humlegården
+740046041,Bus,2,Slussen T-bana
+740046041,Bus,2,Stockholm Barnängen
+740046041,Bus,2,Stockholm Sveaplan
+740046041,Bus,2,Ynglingagatan
+740046044,Bus,65,Moa Martinsons torg
+740046044,Bus,65,Scheelegatan
+740046044,Bus,65,Stockholm Kastellholmsbron
+740046044,Bus,65,Stockholm Nationalmuseum
+740046046,Bus,2,Stockholm Barnängen
+740046046,Bus,2,Stockholm Glasbruksgatan
+740046046,Bus,3,Stockholm Glasbruksgatan
+740046046,Bus,3,Södersjukhuset
+740046046,Bus,53,Henriksdalsberget
+740046046,Bus,53,Stockholm Glasbruksgatan
+740046047,Bus,2,Stockholm Barnängen
+740046047,Bus,2,Stockholm Glasbruksgatan
+740046047,Bus,2,Stockholm Sveaplan
+740046047,Bus,2,Ynglingagatan
+740046047,Bus,3,Karolinska sjukhuset norra
+740046047,Bus,3,Stockholm Glasbruksgatan
+740046047,Bus,3,Södersjukhuset
+740046047,Bus,53,Henriksdalsberget
+740046047,Bus,53,Karolinska institutet västra
+740046047,Bus,53,Stockholm Glasbruksgatan
+740046047,Bus,55,Finnberget
+740046047,Bus,55,Henriksdalsberget
+740046047,Bus,55,Tanto
+740046047,Bus,57,Motalavägen
+740046047,Bus,57,Stockholm Tengdahlsgatan
+740046048,Bus,3,Karolinska sjukhuset norra
+740046048,Bus,3,Stockholm Glasbruksgatan
+740046048,Bus,3,Södersjukhuset
+740046048,Bus,55,Finnberget
+740046048,Bus,55,Henriksdalsberget
+740046048,Bus,55,Tanto
+740046048,Bus,57,Motalavägen
+740046048,Bus,57,Stockholm Tengdahlsgatan
+740046048,Bus,76,Ljusterögatan
+740046048,Bus,76,Ropsten T-bana
+740046048,Bus,76,Slussen T-bana
+740046048,Bus,76,Stockholm Frihamnen
+740046051,Bus,2,Stockholm Barnängen
+740046051,Bus,2,Stockholm Glasbruksgatan
+740046051,Bus,2,Stockholm Sveaplan
+740046051,Bus,2,Ynglingagatan
+740046051,Bus,53,Henriksdalsberget
+740046051,Bus,53,Karolinska institutet västra
+740046051,Bus,53,Stockholm Ersta sjukhus
+740046051,Bus,53,Stockholm Glasbruksgatan
+740046051,Bus,55,Finnberget
+740046051,Bus,55,Henriksdalsberget
+740046051,Bus,55,Stockholm Ersta sjukhus
+740046051,Bus,55,Tanto
+740046052,Bus,2,Stockholm Barnängen
+740046052,Bus,2,Stockholm Glasbruksgatan
+740046052,Bus,2,Stockholm Sveaplan
+740046052,Bus,2,Ynglingagatan
+740046052,Bus,53,Stockholm Ersta sjukhus
+740046052,Bus,55,Finnberget
+740046052,Bus,55,Henriksdalsberget
+740046052,Bus,55,Stockholm Ersta sjukhus
+740046052,Bus,55,Tanto
+740046052,Bus,66,Hornstull T-bana
+740046052,Bus,66,Stockholm Reimersholme
+740046052,Bus,66,Stockholm Tengdahlsgatan
+740046053,Bus,2,Stockholm Barnängen
+740046053,Bus,2,Stockholm Glasbruksgatan
+740046053,Bus,2,Stockholm Sveaplan
+740046053,Bus,2,Ynglingagatan
+740046053,Bus,53,Stockholm Ersta sjukhus
+740046053,Bus,55,Finnberget
+740046053,Bus,55,Henriksdalsberget
+740046053,Bus,55,Stockholm Ersta sjukhus
+740046053,Bus,55,Tanto
+740046053,Bus,66,Hornstull T-bana
+740046053,Bus,66,Stockholm Reimersholme
+740046053,Bus,66,Stockholm Tengdahlsgatan
+740046054,Bus,66,Hornstull T-bana
+740046054,Bus,66,Stockholm Reimersholme
+740046054,Bus,66,Stockholm Tengdahlsgatan
+740046055,Bus,55,Finnberget
+740046055,Bus,55,Henriksdalsberget
+740046055,Bus,55,Tanto
+740046055,Bus,57,Motalavägen
+740046055,Bus,57,Stockholm Tengdahlsgatan
+740046055,Bus,57,Tullgårdsparken
+740046055,Bus,66,Hornstull T-bana
+740046055,Bus,66,Stockholm Reimersholme
+740046055,Bus,66,Stockholm Tengdahlsgatan
+740046058,Bus,53,Henriksdalsberget
+740046058,Bus,53,Karolinska institutet västra
+740046058,Bus,53,Odenplan T-bana
+740046058,Bus,53,Slussen T-bana
+740046058,Bus,72,Karolinska sjukhuset norra
+740046058,Bus,72,Östhammarsgatan
+740046060,Bus,61,Moa Martinsons torg
+740046060,Bus,61,Ruddammen
+740046061,Bus,2,Stockholm Barnängen
+740046061,Bus,2,Stockholm Sveaplan
+740046061,Bus,53,Henriksdalsberget
+740046061,Bus,53,Karolinska institutet västra
+740046061,Bus,53,Slussen T-bana
+740046061,Bus,61,Moa Martinsons torg
+740046061,Bus,61,Ruddammen
+740046062,Bus,2,Stockholm Barnängen
+740046062,Bus,2,Stockholm Sveaplan
+740046062,Bus,53,Henriksdalsberget
+740046062,Bus,53,Karolinska institutet västra
+740046062,Bus,53,Slussen T-bana
+740046062,Bus,61,Ruddammen
+740046063,Bus,2,Stockholm Barnängen
+740046063,Bus,2,Stockholm Sveaplan
+740046063,Bus,53,Henriksdalsberget
+740046063,Bus,53,Karolinska institutet västra
+740046063,Bus,53,Slussen T-bana
+740046065,Bus,69,Djurgårdsbrunn
+740046065,Bus,69,Stockholm Blockhusudden
+740046065,Bus,69,Stockholm C Klarabergsviadukte
+740046065,Bus,76,Ljusterögatan
+740046065,Bus,76,Ropsten T-bana
+740046065,Bus,76,Slussen T-bana
+740046065,Bus,76,Stockholm Frihamnen
+740046065,Tram,7,Stockholm Norrmalmstorg Spårv
+740046065,Tram,7,Stockholm Skansen
+740046065,Tram,7,Stockholm Waldemarsudde
+740046065,Tram,7,T-Centralen Spårv
+740046066,Bus,67,Frösundavik
+740046066,Bus,67,Odenplan T-bana
+740046066,Bus,67,Stockholm Blockhusudden
+740046066,Tram,7,Stockholm Norrmalmstorg Spårv
+740046066,Tram,7,Stockholm Waldemarsudde
+740046066,Tram,7,T-Centralen Spårv
+740046067,Bus,67,Frösundavik
+740046067,Bus,67,Odenplan T-bana
+740046067,Tram,7,Stockholm Norrmalmstorg Spårv
+740046067,Tram,7,T-Centralen Spårv
+740046068,Bus,53,Henriksdalsberget
+740046068,Bus,53,Karolinska institutet västra
+740046068,Bus,53,Odenplan T-bana
+740046068,Bus,53,Slussen T-bana
+740046068,Bus,72,Karolinska sjukhuset norra
+740046068,Bus,72,Östhammarsgatan
+740046073,Bus,3,Fridhemsplan T-bana
+740046073,Bus,3,Karolinska sjukhuset norra
+740046073,Bus,3,Slussen T-bana
+740046073,Bus,3,Södersjukhuset
+740046073,Bus,67,Frösundavik
+740046073,Bus,67,Karlaplan T-bana
+740046073,Bus,67,Stockholm Blockhusudden
+740046074,Bus,3,Fridhemsplan T-bana
+740046074,Bus,3,Karolinska sjukhuset norra
+740046074,Bus,3,Slussen T-bana
+740046074,Bus,3,Södersjukhuset
+740046074,Bus,67,Frösundavik
+740046074,Bus,67,Karlaplan T-bana
+740046074,Bus,67,Stockholm Blockhusudden
+740046075,Bus,1,Stockholm Frihamnen
+740046075,Bus,3,Karolinska sjukhuset norra
+740046075,Bus,3,Slussen T-bana
+740046075,Bus,3,Södersjukhuset
+740046075,Bus,4,Gullmarsplan T-bana
+740046075,Bus,4,Radiohuset
+740046075,Bus,61,Fredhäll
+740046075,Bus,61,Moa Martinsons torg
+740046075,Bus,61,Ruddammen
+740046077,Bus,3,Karolinska sjukhuset norra
+740046077,Bus,3,Slussen T-bana
+740046077,Bus,3,Södersjukhuset
+740046078,Bus,3,Karolinska sjukhuset norra
+740046078,Bus,3,Slussen T-bana
+740046078,Bus,3,Södersjukhuset
+740046079,Bus,3,Slussen T-bana
+740046079,Bus,3,Södersjukhuset
+740046079,Bus,61,Ruddammen
+740046080,Bus,3,Karolinska sjukhuset norra
+740046080,Bus,3,Slussen T-bana
+740046080,Bus,3,Södersjukhuset
+740046080,Bus,61,Moa Martinsons torg
+740046081,Bus,3,Karolinska sjukhuset norra
+740046081,Bus,3,Slussen T-bana
+740046081,Bus,3,Södersjukhuset
+740046082,Bus,3,Karolinska sjukhuset norra
+740046082,Bus,3,Slussen T-bana
+740046082,Bus,3,Södersjukhuset
+740046083,Bus,2,Stockholm Barnängen
+740046083,Bus,2,Stockholm Sveaplan
+740046083,Bus,3,Karolinska sjukhuset norra
+740046083,Bus,3,Slussen T-bana
+740046083,Bus,3,Södersjukhuset
+740046083,Bus,53,Henriksdalsberget
+740046083,Bus,53,Karolinska institutet västra
+740046083,Bus,53,Slussen T-bana
+740046083,Bus,57,Motalavägen
+740046083,Bus,57,Stockholm Tengdahlsgatan
+740046084,Bus,2,Stockholm Barnängen
+740046084,Bus,2,Stockholm Sveaplan
+740046084,Bus,3,Karolinska sjukhuset norra
+740046084,Bus,3,Slussen T-bana
+740046084,Bus,3,Södersjukhuset
+740046084,Bus,53,Henriksdalsberget
+740046084,Bus,53,Karolinska institutet västra
+740046084,Bus,53,Slussen T-bana
+740046084,Bus,57,Motalavägen
+740046084,Bus,57,Stockholm Tengdahlsgatan
+740046085,Bus,2,Stockholm Barnängen
+740046085,Bus,2,Stockholm Sveaplan
+740046085,Bus,3,Karolinska sjukhuset norra
+740046085,Bus,3,Slussen T-bana
+740046085,Bus,3,Södersjukhuset
+740046085,Bus,53,Henriksdalsberget
+740046085,Bus,53,Karolinska institutet västra
+740046085,Bus,53,Slussen T-bana
+740046085,Bus,57,Motalavägen
+740046085,Bus,57,Stockholm Tengdahlsgatan
+740046086,Bus,53,Henriksdalsberget
+740046086,Bus,53,Slussen T-bana
+740046088,Bus,3,Karolinska sjukhuset norra
+740046088,Bus,3,Stockholm Glasbruksgatan
+740046088,Bus,3,Södersjukhuset
+740046088,Bus,55,Finnberget
+740046088,Bus,55,Henriksdalsberget
+740046088,Bus,55,Tanto
+740046088,Bus,57,Motalavägen
+740046088,Bus,57,Stockholm Tengdahlsgatan
+740046088,Bus,66,Hornstull T-bana
+740046088,Bus,66,Stockholm Reimersholme
+740046088,Bus,66,Stockholm Tengdahlsgatan
+740046088,Bus,76,Ljusterögatan
+740046088,Bus,76,Ropsten T-bana
+740046088,Bus,76,Slussen T-bana
+740046088,Bus,76,Stockholm Frihamnen
+740046089,Bus,3,Karolinska sjukhuset norra
+740046089,Bus,3,Ljusterögatan
+740046089,Bus,3,Stockholm Glasbruksgatan
+740046089,Bus,3,Södersjukhuset
+740046089,Bus,55,Finnberget
+740046089,Bus,55,Henriksdalsberget
+740046089,Bus,55,Tanto
+740046089,Bus,57,Motalavägen
+740046089,Bus,57,Stockholm Tengdahlsgatan
+740046089,Bus,66,Hornstull T-bana
+740046089,Bus,66,Stockholm Reimersholme
+740046089,Bus,66,Stockholm Tengdahlsgatan
+740046090,Bus,3,Gullmarsplan T-bana
+740046090,Bus,3,Karolinska sjukhuset norra
+740046090,Bus,3,Ljusterögatan
+740046090,Bus,3,Stockholm Glasbruksgatan
+740046090,Bus,3,Södersjukhuset
+740046090,Bus,4,Gullmarsplan T-bana
+740046090,Bus,4,Radiohuset
+740046090,Bus,55,Finnberget
+740046090,Bus,55,Henriksdalsberget
+740046090,Bus,55,Tanto
+740046090,Bus,57,Motalavägen
+740046090,Bus,57,Stockholm Tengdahlsgatan
+740046090,Bus,57,Tullgårdsparken
+740046090,Bus,66,Hornstull T-bana
+740046090,Bus,66,Stockholm Reimersholme
+740046090,Bus,66,Stockholm Tengdahlsgatan
+740046090,Bus,74,Fridhemsplan T-bana
+740046090,Bus,74,Moa Martinsons torg
+740046090,Bus,74,Sickla udde
+740046090,Bus,74,Södersjukhuset
+740046091,Bus,61,Fredhäll
+740046091,Bus,61,Moa Martinsons torg
+740046091,Bus,61,Ruddammen
+740046092,Bus,3,Gullmarsplan T-bana
+740046092,Bus,3,Karolinska sjukhuset norra
+740046092,Bus,3,Ljusterögatan
+740046092,Bus,3,Stockholm Glasbruksgatan
+740046092,Bus,3,Södersjukhuset
+740046092,Bus,74,Fridhemsplan T-bana
+740046092,Bus,74,Moa Martinsons torg
+740046092,Bus,74,Sickla udde
+740046092,Bus,74,Södersjukhuset
+740046095,Bus,1,Essingetorget
+740046095,Bus,1,Stockholm Frihamnen
+740046095,Bus,54,Fridhemsplan T-bana
+740046095,Bus,54,Hornstull T-bana
+740046095,Bus,54,Stockholm Reimersholme
+740046095,Bus,61,Fredhäll
+740046095,Bus,61,Moa Martinsons torg
+740046095,Bus,61,Ruddammen
+740046095,Bus,74,Fridhemsplan T-bana
+740046095,Bus,74,Moa Martinsons torg
+740046095,Bus,74,Sickla udde
+740046100,Bus,74,Moa Martinsons torg
+740046100,Bus,74,Sickla udde
+740046102,Bus,61,Moa Martinsons torg
+740046102,Bus,61,Ruddammen
+740046103,Bus,61,Moa Martinsons torg
+740046103,Bus,61,Ruddammen
+740046104,Bus,61,Fredhäll
+740046104,Bus,61,Ruddammen
+740046105,Bus,61,Fredhäll
+740046105,Bus,61,Moa Martinsons torg
+740046105,Bus,61,Ruddammen
+740046106,Bus,61,Fredhäll
+740046106,Bus,61,Moa Martinsons torg
+740046106,Bus,61,Ruddammen
+740046107,Bus,1,Essingetorget
+740046107,Bus,1,Stockholm Frihamnen
+740046108,Bus,1,Essingetorget
+740046108,Bus,1,Stockholm Frihamnen
+740046109,Bus,1,Essingetorget
+740046109,Bus,1,Stockholm Frihamnen
+740046111,Bus,1,Essingetorget
+740046111,Bus,1,Stockholm Frihamnen
+740046112,Bus,61,Fredhäll
+740046112,Bus,61,Moa Martinsons torg
+740046112,Bus,61,Ruddammen
+740046113,Bus,61,Fredhäll
+740046113,Bus,61,Moa Martinsons torg
+740046113,Bus,61,Ruddammen
+740046115,Bus,74,Moa Martinsons torg
+740046115,Bus,74,Sickla udde
+740046117,Bus,1,Essingetorget
+740046117,Bus,1,Stockholm Frihamnen
+740046117,Bus,67,Frösundavik
+740046117,Bus,67,Karlaplan T-bana
+740046117,Bus,67,Odenplan T-bana
+740046117,Bus,67,Stockholm Blockhusudden
+740046117,Bus,67,Stockholm Skansen
+740046120,Bus,61,Ruddammen
+740046121,Bus,61,Moa Martinsons torg
+740046121,Bus,61,Ruddammen
+740046122,Bus,55,Finnberget
+740046122,Bus,55,Henriksdalsberget
+740046122,Bus,55,Tanto
+740046122,Bus,57,Motalavägen
+740046122,Bus,57,Stockholm Tengdahlsgatan
+740046122,Bus,57,Tullgårdsparken
+740046124,Bus,61,Ruddammen
+740046125,Bus,61,Moa Martinsons torg
+740046126,Bus,65,Moa Martinsons torg
+740046126,Bus,65,Stockholm Kastellholmsbron
+740046126,Bus,65,Stockholm Nationalmuseum
+740046127,Bus,65,Moa Martinsons torg
+740046127,Bus,65,Stockholm Kastellholmsbron
+740046127,Bus,65,Stockholm Nationalmuseum
+740046135,Bus,66,Stockholm Tengdahlsgatan
+740046136,Bus,50,Lektorsstigen
+740046136,Bus,50,Odenplan T-bana
+740046136,Bus,50,Universitetet T-bana
+740046138,Bus,2,Stockholm Barnängen
+740046138,Bus,2,Stockholm Sveaplan
+740046138,Bus,53,Henriksdalsberget
+740046138,Bus,53,Karolinska institutet västra
+740046138,Bus,53,Slussen T-bana
+740046139,Bus,61,Moa Martinsons torg
+740046139,Bus,61,Ruddammen
+740046139,Bus,65,Stockholm Kastellholmsbron
+740046139,Bus,65,Stockholm Nationalmuseum
+740046141,Bus,53,Henriksdalsberget
+740046141,Bus,53,Karolinska institutet västra
+740046141,Bus,53,Stockholm Glasbruksgatan
+740046141,Bus,55,Finnberget
+740046141,Bus,55,Henriksdalsberget
+740046141,Bus,55,Tanto
+740046142,Bus,53,Karolinska institutet västra
+740046142,Bus,53,Stockholm Glasbruksgatan
+740046142,Bus,55,Tanto
+740046143,Bus,53,Henriksdalsberget
+740046143,Bus,55,Finnberget
+740046143,Bus,55,Henriksdalsberget
+740046144,Bus,55,Finnberget
+740046144,Bus,55,Henriksdalsberget
+740046144,Bus,55,Stockholm Ersta sjukhus
+740046144,Bus,55,Tanto
+740046145,Bus,55,Finnberget
+740046145,Bus,55,Henriksdalsberget
+740046145,Bus,55,Stockholm Ersta sjukhus
+740046145,Bus,55,Tanto
+740046146,Bus,61,Fredhäll
+740046146,Bus,61,Moa Martinsons torg
+740046146,Bus,61,Ruddammen
+740046147,Bus,55,Finnberget
+740046147,Bus,55,Henriksdalsberget
+740046147,Bus,55,Stockholm Ersta sjukhus
+740046147,Bus,55,Tanto
+740046148,Bus,55,Finnberget
+740046148,Bus,55,Henriksdalsberget
+740046148,Bus,55,Stockholm Ersta sjukhus
+740046148,Bus,55,Tanto
+740046149,Bus,53,Henriksdalsberget
+740046149,Bus,53,Karolinska institutet västra
+740046149,Bus,53,Stockholm Ersta sjukhus
+740046149,Bus,53,Stockholm Glasbruksgatan
+740046149,Bus,53,Stockholm Sickla udde
+740046149,Bus,55,Finnberget
+740046149,Bus,55,Henriksdalsberget
+740046149,Bus,55,Stockholm Ersta sjukhus
+740046149,Bus,55,Tanto
+740046150,Bus,4,Gullmarsplan T-bana
+740046150,Bus,4,Radiohuset
+740046151,Bus,54,Fridhemsplan T-bana
+740046151,Bus,54,Stockholm Reimersholme
+740046151,Bus,66,Stockholm Reimersholme
+740046151,Bus,66,Stockholm Tengdahlsgatan
+740046154,Bus,1,Essingetorget
+740046154,Bus,1,Stockholm Frihamnen
+740046154,Bus,4,Gullmarsplan T-bana
+740046154,Bus,4,Radiohuset
+740046154,Bus,54,Fridhemsplan T-bana
+740046154,Bus,54,Hornstull T-bana
+740046154,Bus,54,Stockholm Reimersholme
+740046154,Bus,61,Fredhäll
+740046154,Bus,61,Moa Martinsons torg
+740046154,Bus,61,Ruddammen
+740046154,Bus,74,Fridhemsplan T-bana
+740046154,Bus,74,Moa Martinsons torg
+740046154,Bus,74,Sickla udde
+740046155,Bus,54,Fridhemsplan T-bana
+740046155,Bus,54,Hornstull T-bana
+740046155,Bus,54,Stockholm Reimersholme
+740046155,Bus,74,Fridhemsplan T-bana
+740046155,Bus,74,Moa Martinsons torg
+740046155,Bus,74,Sickla udde
+740046156,Bus,4,Gullmarsplan T-bana
+740046156,Bus,4,Radiohuset
+740046156,Bus,74,Fridhemsplan T-bana
+740046156,Bus,74,Moa Martinsons torg
+740046156,Bus,74,Sickla udde
+740046157,Bus,74,Fridhemsplan T-bana
+740046157,Bus,74,Moa Martinsons torg
+740046157,Bus,74,Sickla udde
+740046158,Bus,4,Gullmarsplan T-bana
+740046158,Bus,66,Stockholm Tengdahlsgatan
+740046158,Bus,74,Sickla udde
+740046159,Bus,4,Radiohuset
+740046159,Bus,66,Hornstull T-bana
+740046159,Bus,66,Stockholm Reimersholme
+740046159,Bus,66,Stockholm Tengdahlsgatan
+740046159,Bus,74,Fridhemsplan T-bana
+740046159,Bus,74,Moa Martinsons torg
+740046160,Bus,66,Hornstull T-bana
+740046160,Bus,66,Stockholm Reimersholme
+740046160,Bus,66,Stockholm Tengdahlsgatan
+740046160,Bus,74,Fridhemsplan T-bana
+740046160,Bus,74,Moa Martinsons torg
+740046160,Bus,74,Sickla udde
+740046161,Bus,74,Fridhemsplan T-bana
+740046161,Bus,74,Moa Martinsons torg
+740046161,Bus,74,Sickla udde
+740046161,Bus,74,Södersjukhuset
+740046163,Bus,57,Motalavägen
+740046163,Bus,57,Slussen T-bana
+740046163,Bus,57,Stockholm Tengdahlsgatan
+740046163,Bus,57,Tekniska Högskolan T-bana
+740046163,Bus,57,Tullgårdsparken
+740046164,Bus,57,Motalavägen
+740046164,Bus,57,Slussen T-bana
+740046164,Bus,57,Stockholm Tengdahlsgatan
+740046164,Bus,57,Tekniska Högskolan T-bana
+740046164,Bus,57,Tullgårdsparken
+740046165,Bus,57,Motalavägen
+740046165,Bus,57,Slussen T-bana
+740046165,Bus,57,Stockholm Tengdahlsgatan
+740046165,Bus,57,Tekniska Högskolan T-bana
+740046165,Bus,57,Tullgårdsparken
+740046166,Bus,57,Motalavägen
+740046166,Bus,57,Slussen T-bana
+740046166,Bus,57,Stockholm Tengdahlsgatan
+740046166,Bus,57,Tekniska Högskolan T-bana
+740046166,Bus,57,Tullgårdsparken
+740046166,Bus,75,Ropsten T-bana
+740046166,Bus,75,Stockholm Citytermin Kungsbron
+740046167,Bus,57,Motalavägen
+740046167,Bus,57,Slussen T-bana
+740046167,Bus,57,Stockholm Tengdahlsgatan
+740046167,Bus,57,Tekniska Högskolan T-bana
+740046167,Bus,57,Tullgårdsparken
+740046168,Bus,55,Finnberget
+740046168,Bus,55,Henriksdalsberget
+740046168,Bus,55,Tanto
+740046168,Bus,57,Motalavägen
+740046168,Bus,57,Stockholm Tengdahlsgatan
+740046168,Bus,57,Tullgårdsparken
+740046168,Bus,66,Stockholm Reimersholme
+740046168,Bus,66,Stockholm Tengdahlsgatan
+740046169,Bus,55,Finnberget
+740046169,Bus,55,Henriksdalsberget
+740046169,Bus,55,Tanto
+740046169,Bus,57,Motalavägen
+740046169,Bus,57,Stockholm Tengdahlsgatan
+740046169,Bus,57,Tullgårdsparken
+740046169,Bus,66,Stockholm Reimersholme
+740046169,Bus,66,Stockholm Tengdahlsgatan
+740046170,Bus,55,Finnberget
+740046170,Bus,55,Henriksdalsberget
+740046170,Bus,55,Tanto
+740046170,Bus,57,Motalavägen
+740046170,Bus,57,Stockholm Tengdahlsgatan
+740046170,Bus,57,Tullgårdsparken
+740046170,Bus,66,Stockholm Reimersholme
+740046170,Bus,66,Stockholm Tengdahlsgatan
+740046172,Bus,57,Motalavägen
+740046172,Bus,57,Slussen T-bana
+740046172,Bus,57,Stockholm Tengdahlsgatan
+740046172,Bus,57,Tekniska Högskolan T-bana
+740046172,Bus,57,Tullgårdsparken
+740046172,Bus,75,Ropsten T-bana
+740046172,Bus,75,Stockholm Citytermin Kungsbron
+740046175,Bus,57,Motalavägen
+740046175,Bus,57,Slussen T-bana
+740046175,Bus,57,Stockholm Tengdahlsgatan
+740046175,Bus,57,Tekniska Högskolan T-bana
+740046175,Bus,57,Tullgårdsparken
+740046175,Bus,75,Ropsten T-bana
+740046175,Bus,75,Stockholm Citytermin Kungsbron
+740046189,Bus,55,Finnberget
+740046189,Bus,55,Henriksdalsberget
+740046189,Bus,55,Tanto
+740046189,Bus,57,Motalavägen
+740046189,Bus,57,Stockholm Tengdahlsgatan
+740046189,Bus,57,Tullgårdsparken
+740046189,Bus,66,Hornstull T-bana
+740046189,Bus,66,Stockholm Reimersholme
+740046189,Bus,66,Stockholm Tengdahlsgatan
+740046192,Bus,55,Finnberget
+740046192,Bus,55,Henriksdalsberget
+740046192,Bus,55,Tanto
+740046193,Bus,55,Finnberget
+740046193,Bus,55,Henriksdalsberget
+740046193,Bus,55,Tanto
+740046197,Bus,65,Stockholm Kastellholmsbron
+740046198,Bus,76,Ropsten T-bana
+740046198,Bus,76,Slussen T-bana
+740046198,Bus,76,Stockholm Frihamnen
+740046199,Bus,76,Ljusterögatan
+740046199,Bus,76,Ropsten T-bana
+740046199,Bus,76,Slussen T-bana
+740046199,Bus,76,Stockholm Frihamnen
+740046201,Bus,3,Ljusterögatan
+740046201,Bus,3,Södersjukhuset
+740046201,Bus,76,Ljusterögatan
+740046201,Bus,76,Ropsten T-bana
+740046201,Bus,76,Slussen T-bana
+740046201,Bus,76,Stockholm Frihamnen
+740046205,Bus,76,Karlaplan T-bana
+740046205,Bus,76,Ljusterögatan
+740046205,Bus,76,Ropsten T-bana
+740046205,Bus,76,Slussen T-bana
+740046206,Bus,76,Karlaplan T-bana
+740046206,Bus,76,Ljusterögatan
+740046206,Bus,76,Ropsten T-bana
+740046210,Bus,55,Finnberget
+740046210,Bus,55,Henriksdalsberget
+740046210,Bus,55,Tanto
+740046210,Bus,57,Motalavägen
+740046210,Bus,57,Stockholm Tengdahlsgatan
+740046211,Bus,55,Finnberget
+740046211,Bus,55,Henriksdalsberget
+740046211,Bus,55,Tanto
+740046211,Bus,57,Motalavägen
+740046211,Bus,57,Stockholm Tengdahlsgatan
+740046212,Bus,2,Stockholm Barnängen
+740046212,Bus,2,Stockholm Glasbruksgatan
+740046212,Bus,2,Stockholm Sveaplan
+740046212,Bus,2,Ynglingagatan
+740046212,Bus,55,Finnberget
+740046212,Bus,55,Henriksdalsberget
+740046212,Bus,55,Tanto
+740046212,Bus,57,Motalavägen
+740046212,Bus,57,Stockholm Tengdahlsgatan
+740046213,Bus,55,Finnberget
+740046213,Bus,55,Henriksdalsberget
+740046213,Bus,55,Tanto
+740046213,Bus,57,Motalavägen
+740046213,Bus,57,Stockholm Tengdahlsgatan
+740046214,Bus,61,Moa Martinsons torg
+740046216,Bus,57,Motalavägen
+740046217,Bus,57,Motalavägen
+740046217,Bus,57,Slussen T-bana
+740046217,Bus,57,Stockholm Tengdahlsgatan
+740046217,Bus,57,Tekniska Högskolan T-bana
+740046217,Bus,57,Tullgårdsparken
+740046218,Bus,57,Motalavägen
+740046218,Bus,57,Slussen T-bana
+740046218,Bus,57,Stockholm Tengdahlsgatan
+740046218,Bus,57,Tekniska Högskolan T-bana
+740046218,Bus,57,Tullgårdsparken
+740046219,Bus,57,Motalavägen
+740046219,Bus,57,Slussen T-bana
+740046219,Bus,57,Stockholm Tengdahlsgatan
+740046219,Bus,57,Tekniska Högskolan T-bana
+740046219,Bus,57,Tullgårdsparken
+740046221,Bus,66,Hornstull T-bana
+740046221,Bus,66,Stockholm Reimersholme
+740046221,Bus,66,Stockholm Tengdahlsgatan
+740046222,Bus,54,Fridhemsplan T-bana
+740046222,Bus,54,Stockholm Reimersholme
+740046222,Bus,66,Stockholm Reimersholme
+740046222,Bus,66,Stockholm Tengdahlsgatan
+740046223,Bus,66,Hornstull T-bana
+740046223,Bus,66,Stockholm Reimersholme
+740046223,Bus,66,Stockholm Tengdahlsgatan
+740046224,Bus,54,Fridhemsplan T-bana
+740046224,Bus,66,Stockholm Tengdahlsgatan
+740046225,Bus,54,Stockholm Reimersholme
+740046225,Bus,66,Stockholm Reimersholme
+740046226,Bus,54,Fridhemsplan T-bana
+740046226,Bus,54,Stockholm Reimersholme
+740046226,Bus,66,Stockholm Reimersholme
+740046226,Bus,66,Stockholm Tengdahlsgatan
+740046228,Bus,66,Hornstull T-bana
+740046228,Bus,66,Stockholm Reimersholme
+740046228,Bus,66,Stockholm Tengdahlsgatan
+740046229,Bus,66,Hornstull T-bana
+740046229,Bus,66,Stockholm Reimersholme
+740046229,Bus,66,Stockholm Tengdahlsgatan
+740046230,Bus,66,Stockholm Tengdahlsgatan
+740046231,Bus,2,Stockholm Barnängen
+740046231,Bus,2,Stockholm Glasbruksgatan
+740046231,Bus,2,Stockholm Sveaplan
+740046231,Bus,2,Ynglingagatan
+740046231,Bus,53,Stockholm Ersta sjukhus
+740046231,Bus,55,Finnberget
+740046231,Bus,55,Henriksdalsberget
+740046231,Bus,55,Stockholm Ersta sjukhus
+740046231,Bus,55,Tanto
+740046231,Bus,66,Hornstull T-bana
+740046231,Bus,66,Stockholm Reimersholme
+740046231,Bus,66,Stockholm Tengdahlsgatan
+740046233,Bus,57,Motalavägen
+740046233,Bus,57,Stockholm Tengdahlsgatan
+740046233,Bus,66,Hornstull T-bana
+740046233,Bus,66,Stockholm Reimersholme
+740046233,Bus,66,Stockholm Tengdahlsgatan
+740046234,Bus,55,Finnberget
+740046234,Bus,55,Tanto
+740046239,Bus,69,Djurgårdsbrunn
+740046239,Bus,69,Karlaplan T-bana
+740046239,Bus,69,Stockholm Blockhusudden
+740046239,Bus,69,Stockholm C Klarabergsviadukte
+740046240,Bus,69,Djurgårdsbrunn
+740046240,Bus,69,Karlaplan T-bana
+740046240,Bus,69,Stockholm Blockhusudden
+740046240,Bus,69,Stockholm C Klarabergsviadukte
+740046241,Bus,69,Djurgårdsbrunn
+740046241,Bus,69,Karlaplan T-bana
+740046241,Bus,69,Stockholm Blockhusudden
+740046241,Bus,69,Stockholm C Klarabergsviadukte
+740046242,Bus,69,Djurgårdsbrunn
+740046242,Bus,69,Karlaplan T-bana
+740046242,Bus,69,Stockholm Blockhusudden
+740046242,Bus,69,Stockholm C Klarabergsviadukte
+740046252,Bus,2,Humlegården
+740046252,Bus,2,Ynglingagatan
+740062695,Bus,61,Moa Martinsons torg
+740062695,Bus,61,Ruddammen
+740062695,Bus,65,Moa Martinsons torg
+740062695,Bus,65,Scheelegatan
+740062695,Bus,65,Stockholm Kastellholmsbron
+740062695,Bus,65,Stockholm Nationalmuseum
+740062695,Bus,74,Moa Martinsons torg
+740062695,Bus,74,Sickla udde
+740063007,Bus,65,Moa Martinsons torg
+740063007,Bus,65,Scheelegatan
+740063007,Bus,65,Stockholm Kastellholmsbron
+740063007,Bus,65,Stockholm Nationalmuseum
+740064035,Bus,65,Moa Martinsons torg
+740064035,Bus,65,Scheelegatan
+740064035,Bus,65,Stockholm Kastellholmsbron
+740064035,Bus,65,Stockholm Nationalmuseum
+740064376,Ferry,89,Klara Mälarstrand
+740064376,Ferry,89,Tappström
+740065626,Bus,4,Gullmarsplan T-bana
+740065626,Bus,4,Radiohuset
+740066606,Bus,67,Frösundavik
+740066606,Bus,67,Karlaplan T-bana
+740066606,Bus,67,Stockholm Blockhusudden
+740066607,Bus,67,Frösundavik
+740066607,Bus,67,Karlaplan T-bana
+740066607,Bus,67,Stockholm Blockhusudden
+740068909,Bus,50,Lektorsstigen
+740068909,Bus,50,Odenplan T-bana
+740068909,Bus,50,Universitetet T-bana
+740069180,Bus,74,Sickla udde
+740070759,Bus,53,Henriksdalsberget
+740070759,Bus,53,Karolinska institutet västra
+740070759,Bus,53,Stockholm Ersta sjukhus
+740070759,Bus,53,Stockholm Glasbruksgatan
+740070759,Bus,53,Stockholm Sickla udde
+740071516,Bus,76,Karlaplan T-bana
+740071516,Bus,76,Ljusterögatan
+740071516,Bus,76,Ropsten T-bana
+740071516,Bus,76,Slussen T-bana
+740071562,Bus,66,Hornstull T-bana
+740071562,Bus,66,Stockholm Reimersholme
+740071562,Bus,66,Stockholm Tengdahlsgatan
+740072737,Bus,1,Essingetorget
+740072737,Bus,1,Stockholm Frihamnen
+740072737,Bus,57,Motalavägen
+740072737,Bus,57,Stockholm Tengdahlsgatan
+740072737,Bus,75,Ropsten T-bana
+740072737,Bus,75,Stockholm Citytermin Kungsbron
+740073452,Ferry,89,Klara Mälarstrand
+740073452,Ferry,89,Tappström
+740073532,Bus,2,Ynglingagatan
+740073532,Bus,57,Motalavägen
+740073532,Bus,65,Moa Martinsons torg
+740073532,Bus,76,Ropsten T-bana
+740073532,Bus,76,Stockholm Frihamnen
+740074606,Bus,57,Motalavägen
+740074606,Bus,57,Stockholm Tengdahlsgatan
+740075295,Bus,57,Motalavägen
+740075295,Bus,57,Slussen T-bana
+740075295,Bus,57,Stockholm Tengdahlsgatan
+740075295,Bus,57,Tekniska Högskolan T-bana
+740075295,Bus,57,Tullgårdsparken
+odenplan,Bus,1,Essingetorget
+odenplan,Bus,1,Stockholm Frihamnen
+odenplan,Bus,2,Humlegården
+odenplan,Bus,2,Slussen T-bana
+odenplan,Bus,2,Stockholm Barnängen
+odenplan,Bus,2,Stockholm Sveaplan
+odenplan,Bus,2,Ynglingagatan
+odenplan,Bus,4,Gullmarsplan T-bana
+odenplan,Bus,4,Radiohuset
+odenplan,Bus,50,Lektorsstigen
+odenplan,Bus,50,Odenplan T-bana
+odenplan,Bus,50,Universitetet T-bana
+odenplan,Bus,53,Henriksdalsberget
+odenplan,Bus,53,Karolinska institutet västra
+odenplan,Bus,53,Odenplan T-bana
+odenplan,Bus,53,Slussen T-bana
+odenplan,Bus,61,Fredhäll
+odenplan,Bus,61,Moa Martinsons torg
+odenplan,Bus,61,Ruddammen
+odenplan,Bus,67,Frösundavik
+odenplan,Bus,67,Karlaplan T-bana
+odenplan,Bus,67,Odenplan T-bana
+odenplan,Bus,67,Stockholm Blockhusudden
+odenplan,Bus,67,Stockholm Skansen
+odenplan,Bus,72,Karolinska sjukhuset norra
+odenplan,Bus,72,Östhammarsgatan
+odenplan,Commuter train / Pendeltåg,40,Flemingsberg station
+odenplan,Commuter train / Pendeltåg,40,Häggvik station
+odenplan,Commuter train / Pendeltåg,40,Knivsta station
+odenplan,Commuter train / Pendeltåg,40,Rönninge station
+odenplan,Commuter train / Pendeltåg,40,Stockholm City station
+odenplan,Commuter train / Pendeltåg,40,Stockholm södra station
+odenplan,Commuter train / Pendeltåg,40,Södertälje centrum station
+odenplan,Commuter train / Pendeltåg,40,Södertälje hamn station
+odenplan,Commuter train / Pendeltåg,40,Tumba station
+odenplan,Commuter train / Pendeltåg,40,Uppsala Centralstation
+odenplan,Commuter train / Pendeltåg,40,Älvsjö station
+odenplan,Commuter train / Pendeltåg,40,Östertälje station
+odenplan,Commuter train / Pendeltåg,41,Flemingsberg station
+odenplan,Commuter train / Pendeltåg,41,Märsta station
+odenplan,Commuter train / Pendeltåg,41,Rosersberg station
+odenplan,Commuter train / Pendeltåg,41,Rönninge station
+odenplan,Commuter train / Pendeltåg,41,Sollentuna station
+odenplan,Commuter train / Pendeltåg,41,Stockholm City station
+odenplan,Commuter train / Pendeltåg,41,Stockholm Odenplan station
+odenplan,Commuter train / Pendeltåg,41,Södertälje centrum station
+odenplan,Commuter train / Pendeltåg,41,Södertälje hamn station
+odenplan,Commuter train / Pendeltåg,41,Tumba station
+odenplan,Commuter train / Pendeltåg,41,Upplands Väsby station
+odenplan,Commuter train / Pendeltåg,41,Uppsala Centralstation
+odenplan,Commuter train / Pendeltåg,41,Älvsjö station
+odenplan,Commuter train / Pendeltåg,41,Östertälje station
+odenplan,Commuter train / Pendeltåg,43,Barkarby station
+odenplan,Commuter train / Pendeltåg,43,Bro station
+odenplan,Commuter train / Pendeltåg,43,Bålsta station
+odenplan,Commuter train / Pendeltåg,43,Handen station
+odenplan,Commuter train / Pendeltåg,43,Kallhäll station
+odenplan,Commuter train / Pendeltåg,43,Kungsängen station
+odenplan,Commuter train / Pendeltåg,43,Nynäshamn station
+odenplan,Commuter train / Pendeltåg,43,Skogås station
+odenplan,Commuter train / Pendeltåg,43,Stockholm City station
+odenplan,Commuter train / Pendeltåg,43,Stockholm Odenplan station
+odenplan,Commuter train / Pendeltåg,43,Tungelsta station
+odenplan,Commuter train / Pendeltåg,43,Västerhaninge station
+odenplan,Commuter train / Pendeltåg,43,Älvsjö station
+odenplan,Commuter train / Pendeltåg,43,Årstaberg station
+odenplan,Metro,17,Alvik T-bana
+odenplan,Metro,17,Hässelby Strand T-bana
+odenplan,Metro,17,Odenplan T-bana
+odenplan,Metro,17,Skarpnäck T-bana
+odenplan,Metro,17,Vällingby T-bana
+odenplan,Metro,17,Åkeshov T-bana
+odenplan,Metro,18,Alvik T-bana
+odenplan,Metro,18,Farsta Strand T-bana
+odenplan,Metro,18,Hässelby Strand T-bana
+odenplan,Metro,18,Hökarängen T-bana
+odenplan,Metro,18,Odenplan T-bana
+odenplan,Metro,18,Vällingby T-bana
+odenplan,Metro,18,Åkeshov T-bana
+odenplan,Metro,19,Alvik T-bana
+odenplan,Metro,19,Gullmarsplan T-bana
+odenplan,Metro,19,Hagsätra T-bana
+odenplan,Metro,19,Hässelby Strand T-bana
+odenplan,Metro,19,Högdalen T-bana
+odenplan,Metro,19,Odenplan T-bana
+odenplan,Metro,19,Vällingby T-bana
+odenplan,Metro,19,Åkeshov T-bana
+slussen,Bus,2,Slussen T-bana
+slussen,Bus,2,Stockholm Barnängen
+slussen,Bus,2,Stockholm Sveaplan
+slussen,Bus,2,Ynglingagatan
+slussen,Bus,3,Karolinska sjukhuset norra
+slussen,Bus,3,Slussen T-bana
+slussen,Bus,3,Södersjukhuset
+slussen,Bus,53,Henriksdalsberget
+slussen,Bus,53,Karolinska institutet västra
+slussen,Bus,53,Slussen T-bana
+slussen,Bus,55,Finnberget
+slussen,Bus,55,Henriksdalsberget
+slussen,Bus,55,Tanto
+slussen,Bus,57,Motalavägen
+slussen,Bus,57,Slussen T-bana
+slussen,Bus,57,Stockholm Tengdahlsgatan
+slussen,Bus,57,Tullgårdsparken
+slussen,Bus,76,Ljusterögatan
+slussen,Bus,76,Ropsten T-bana
+slussen,Bus,76,Slussen T-bana
+slussen,Bus,76,Stockholm Frihamnen
+slussen,Ferry,82,Stockholm Allmänna gränd brygg
+slussen,Ferry,82,Stockholm Slussen kajen
+slussen,Ferry,84,Stockholm Strömkajen
+slussen,Ferry,84,Ålstäket brygga
+slussen,Metro,13,Alby T-bana
+slussen,Metro,13,Axelsberg T-bana
+slussen,Metro,13,Norsborg T-bana
+slussen,Metro,13,Ropsten T-bana
+slussen,Metro,13,Sätra T-bana
+slussen,Metro,14,Fruängen T-bana
+slussen,Metro,14,Liljeholmen T-bana
+slussen,Metro,14,Mörby centrum T-bana
+slussen,Metro,14,Tekniska Högskolan T-bana
+slussen,Metro,14,Telefonplan T-bana
+slussen,Metro,17,Alvik T-bana
+slussen,Metro,17,Hässelby Strand T-bana
+slussen,Metro,17,Odenplan T-bana
+slussen,Metro,17,Skarpnäck T-bana
+slussen,Metro,17,Vällingby T-bana
+slussen,Metro,17,Åkeshov T-bana
+slussen,Metro,18,Alvik T-bana
+slussen,Metro,18,Farsta Strand T-bana
+slussen,Metro,18,Hässelby Strand T-bana
+slussen,Metro,18,Hökarängen T-bana
+slussen,Metro,18,Odenplan T-bana
+slussen,Metro,18,Vällingby T-bana
+slussen,Metro,18,Åkeshov T-bana
+slussen,Metro,19,Alvik T-bana
+slussen,Metro,19,Gullmarsplan T-bana
+slussen,Metro,19,Hagsätra T-bana
+slussen,Metro,19,Hässelby Strand T-bana
+slussen,Metro,19,Högdalen T-bana
+slussen,Metro,19,Odenplan T-bana
+slussen,Metro,19,Rådmansgatan T-bana
+slussen,Metro,19,Vällingby T-bana
+slussen,Metro,19,Åkeshov T-bana
+stockholm-central,Bus,57,Motalavägen
+stockholm-central,Bus,57,Stockholm Tengdahlsgatan
+stockholm-central,Bus,65,Moa Martinsons torg
+stockholm-central,Bus,65,Stockholm Kastellholmsbron
+stockholm-central,Bus,65,Stockholm Nationalmuseum
+stockholm-central,Bus,69,Djurgårdsbrunn
+stockholm-central,Bus,69,Stockholm Blockhusudden
+stockholm-central,Bus,69,Stockholm C Klarabergsviadukte
+stockholm-central,Commuter train / Pendeltåg,40,Flemingsberg station
+stockholm-central,Commuter train / Pendeltåg,40,Häggvik station
+stockholm-central,Commuter train / Pendeltåg,40,Knivsta station
+stockholm-central,Commuter train / Pendeltåg,40,Rönninge station
+stockholm-central,Commuter train / Pendeltåg,40,Stockholm City station
+stockholm-central,Commuter train / Pendeltåg,40,Stockholm södra station
+stockholm-central,Commuter train / Pendeltåg,40,Södertälje centrum station
+stockholm-central,Commuter train / Pendeltåg,40,Södertälje hamn station
+stockholm-central,Commuter train / Pendeltåg,40,Tumba station
+stockholm-central,Commuter train / Pendeltåg,40,Uppsala Centralstation
+stockholm-central,Commuter train / Pendeltåg,40,Älvsjö station
+stockholm-central,Commuter train / Pendeltåg,40,Östertälje station
+stockholm-central,Commuter train / Pendeltåg,41,Flemingsberg station
+stockholm-central,Commuter train / Pendeltåg,41,Märsta station
+stockholm-central,Commuter train / Pendeltåg,41,Rosersberg station
+stockholm-central,Commuter train / Pendeltåg,41,Rönninge station
+stockholm-central,Commuter train / Pendeltåg,41,Sollentuna station
+stockholm-central,Commuter train / Pendeltåg,41,Stockholm City station
+stockholm-central,Commuter train / Pendeltåg,41,Stockholm Odenplan station
+stockholm-central,Commuter train / Pendeltåg,41,Södertälje centrum station
+stockholm-central,Commuter train / Pendeltåg,41,Södertälje hamn station
+stockholm-central,Commuter train / Pendeltåg,41,Tumba station
+stockholm-central,Commuter train / Pendeltåg,41,Upplands Väsby station
+stockholm-central,Commuter train / Pendeltåg,41,Uppsala Centralstation
+stockholm-central,Commuter train / Pendeltåg,41,Älvsjö station
+stockholm-central,Commuter train / Pendeltåg,41,Östertälje station
+stockholm-central,Commuter train / Pendeltåg,43,Barkarby station
+stockholm-central,Commuter train / Pendeltåg,43,Bro station
+stockholm-central,Commuter train / Pendeltåg,43,Bålsta station
+stockholm-central,Commuter train / Pendeltåg,43,Handen station
+stockholm-central,Commuter train / Pendeltåg,43,Kallhäll station
+stockholm-central,Commuter train / Pendeltåg,43,Kungsängen station
+stockholm-central,Commuter train / Pendeltåg,43,Nynäshamn station
+stockholm-central,Commuter train / Pendeltåg,43,Skogås station
+stockholm-central,Commuter train / Pendeltåg,43,Stockholm City station
+stockholm-central,Commuter train / Pendeltåg,43,Stockholm Odenplan station
+stockholm-central,Commuter train / Pendeltåg,43,Tungelsta station
+stockholm-central,Commuter train / Pendeltåg,43,Västerhaninge station
+stockholm-central,Commuter train / Pendeltåg,43,Älvsjö station
+stockholm-central,Commuter train / Pendeltåg,43,Årstaberg station
+stockholm-central,Metro,10,Hjulsta T-bana
+stockholm-central,Metro,10,Kungsträdgården T-bana
+stockholm-central,Metro,10,T-Centralen T-bana
+stockholm-central,Metro,11,Akalla T-bana
+stockholm-central,Metro,11,Kungsträdgården T-bana
+stockholm-central,Metro,11,T-Centralen T-bana
+stockholm-central,Metro,13,Alby T-bana
+stockholm-central,Metro,13,Axelsberg T-bana
+stockholm-central,Metro,13,Norsborg T-bana
+stockholm-central,Metro,13,Ropsten T-bana
+stockholm-central,Metro,13,Sätra T-bana
+stockholm-central,Metro,14,Fruängen T-bana
+stockholm-central,Metro,14,Liljeholmen T-bana
+stockholm-central,Metro,14,Mörby centrum T-bana
+stockholm-central,Metro,14,Tekniska Högskolan T-bana
+stockholm-central,Metro,14,Telefonplan T-bana
+stockholm-central,Metro,17,Alvik T-bana
+stockholm-central,Metro,17,Hässelby Strand T-bana
+stockholm-central,Metro,17,Odenplan T-bana
+stockholm-central,Metro,17,Skarpnäck T-bana
+stockholm-central,Metro,17,Vällingby T-bana
+stockholm-central,Metro,17,Åkeshov T-bana
+stockholm-central,Metro,18,Alvik T-bana
+stockholm-central,Metro,18,Farsta Strand T-bana
+stockholm-central,Metro,18,Hässelby Strand T-bana
+stockholm-central,Metro,18,Hökarängen T-bana
+stockholm-central,Metro,18,Odenplan T-bana
+stockholm-central,Metro,18,Vällingby T-bana
+stockholm-central,Metro,18,Åkeshov T-bana
+stockholm-central,Metro,19,Alvik T-bana
+stockholm-central,Metro,19,Gullmarsplan T-bana
+stockholm-central,Metro,19,Hagsätra T-bana
+stockholm-central,Metro,19,Hässelby Strand T-bana
+stockholm-central,Metro,19,Högdalen T-bana
+stockholm-central,Metro,19,Odenplan T-bana
+stockholm-central,Metro,19,Rådmansgatan T-bana
+stockholm-central,Metro,19,Vällingby T-bana
+stockholm-central,Metro,19,Åkeshov T-bana
+stockholm-central,Tram,7,Stockholm Skansen
+stockholm-central,Tram,7,Stockholm Waldemarsudde
+stockholm-central,Tram,7,T-Centralen Spårv
