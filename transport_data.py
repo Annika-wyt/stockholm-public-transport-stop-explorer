@@ -27,6 +27,9 @@ LINE_PATTERN_COLUMNS = [
     "line",
     "direction",
     "station_id",
+    "station_name",
+    "latitude",
+    "longitude",
     "stop_sequence",
 ]
 
@@ -118,17 +121,24 @@ def load_line_patterns(file_path: str | Path = LINE_PATTERNS_FILE) -> pd.DataFra
     """Load ordered station patterns generated from GTFS stop sequences."""
 
     patterns = _read_csv(file_path, LINE_PATTERN_COLUMNS)
-    text_columns = [column for column in LINE_PATTERN_COLUMNS if column != "stop_sequence"]
+    numeric_columns = {"latitude", "longitude", "stop_sequence"}
+    text_columns = [
+        column for column in LINE_PATTERN_COLUMNS if column not in numeric_columns
+    ]
     for column in text_columns:
         patterns[column] = patterns[column].str.strip()
 
     patterns["stop_sequence"] = pd.to_numeric(
         patterns["stop_sequence"], errors="coerce"
     )
+    patterns["latitude"] = pd.to_numeric(patterns["latitude"], errors="coerce")
+    patterns["longitude"] = pd.to_numeric(patterns["longitude"], errors="coerce")
     valid_rows = (
         patterns[text_columns].ne("").all(axis=1)
         & patterns["stop_sequence"].notna()
         & patterns["stop_sequence"].ge(1)
+        & patterns["latitude"].between(-90, 90, inclusive="both")
+        & patterns["longitude"].between(-180, 180, inclusive="both")
     )
     patterns = patterns.loc[valid_rows].copy()
     patterns["stop_sequence"] = patterns["stop_sequence"].astype(int)
@@ -279,18 +289,11 @@ def get_patterns_for_line(
 
 
 def get_stations_for_pattern(
-    stations: pd.DataFrame,
     line_patterns: pd.DataFrame,
     pattern_id: str,
 ) -> pd.DataFrame:
-    """Return station coordinates in the stop order of one selected pattern."""
+    """Return full-route station coordinates in one pattern's stop order."""
 
-    selected_pattern = line_patterns.loc[
+    return line_patterns.loc[
         line_patterns["pattern_id"].eq(str(pattern_id).strip())
-    ].sort_values("stop_sequence", kind="stable")
-    return selected_pattern.merge(
-        stations,
-        on="station_id",
-        how="inner",
-        validate="many_to_one",
-    ).reset_index(drop=True)
+    ].sort_values("stop_sequence", kind="stable").reset_index(drop=True)

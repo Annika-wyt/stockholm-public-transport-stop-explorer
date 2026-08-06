@@ -66,7 +66,7 @@ station_id,transport_type,line,destination
 trip pattern:
 
 ```csv
-pattern_id,route_id,transport_type,line,direction,station_id,stop_sequence
+pattern_id,route_id,transport_type,line,direction,station_id,station_name,latitude,longitude,stop_sequence
 ```
 
 `data/station_groups.csv` is a mentor-maintained input for combining related
@@ -109,7 +109,11 @@ feed rather than departures on a particular day.
 
 With the supplied snapshot and current settings, the generated dataset contains
 283 map stations, 2,038 unique station/type/line/destination combinations, and
-282 ordered line patterns containing 3,476 stops.
+567 ordered line patterns containing 9,001 stops.
+
+The 283-station geographic limit applies only to the main Explore map. Ordered
+line patterns retain complete routes for the selected lines, including outer
+endpoints such as Mörby centrum, Fruängen, and commuter-rail terminals.
 
 ## Using the prepared data
 

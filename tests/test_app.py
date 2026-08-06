@@ -13,7 +13,11 @@ from app import (
     build_station_map,
     get_selected_station_id,
 )
-from transport_data import get_patterns_for_line, load_line_patterns
+from transport_data import (
+    get_patterns_for_line,
+    get_stations_for_pattern,
+    load_line_patterns,
+)
 
 
 PROJECT_DIR = Path(__file__).resolve().parents[1]
@@ -135,3 +139,35 @@ def test_comparison_and_line_explorer_work_in_the_running_app() -> None:
     assert "Stockholm Central / T-Centralen" in subheaders
     assert "Slussen" in subheaders
     assert any(metric.label == "Stations found" for metric in app.metric)
+
+
+def test_line_explorer_displays_morby_centrum_endpoint() -> None:
+    app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
+    app.selectbox[3].set_value(("Metro", "14")).run(timeout=10)
+
+    patterns = get_patterns_for_line(load_line_patterns(), "Metro", "14")
+    morby_pattern_id = next(
+        pattern_id
+        for pattern_id in patterns["pattern_id"].unique()
+        if get_stations_for_pattern(load_line_patterns(), pattern_id).iloc[-1][
+            "station_name"
+        ]
+        == "Mörby centrum T-bana"
+    )
+    pattern_selector = next(
+        selectbox
+        for selectbox in app.selectbox
+        if selectbox.label == "Select a direction / pattern"
+    )
+    pattern_selector.set_value(morby_pattern_id).run(timeout=10)
+
+    assert not app.exception
+    station_tables = [
+        dataframe.value
+        for dataframe in app.dataframe
+        if "Station" in dataframe.value.columns
+    ]
+    assert any(
+        "Mörby centrum T-bana" in set(table["Station"])
+        for table in station_tables
+    )

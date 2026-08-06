@@ -92,8 +92,8 @@ def test_real_generated_data_is_queryable() -> None:
 
     assert len(stations) == 283
     assert len(services) == 2_038
-    assert len(line_patterns) == 3_476
-    assert line_patterns["pattern_id"].nunique() == 282
+    assert len(line_patterns) == 9_001
+    assert line_patterns["pattern_id"].nunique() == 567
     assert get_station(stations, "stockholm-central") is not None
     assert not get_services_for_station(services, "stockholm-central").empty
 
@@ -103,13 +103,25 @@ def test_ordered_line_patterns_load_and_join_to_station_coordinates() -> None:
     patterns = load_line_patterns(FIXTURES_DIR / "line_patterns.csv")
 
     metro_patterns = get_patterns_for_line(patterns, "Metro", "10")
-    ordered_stations = get_stations_for_pattern(
-        stations, patterns, "metro-pattern"
-    )
+    ordered_stations = get_stations_for_pattern(patterns, "metro-pattern")
 
     assert len(metro_patterns) == 2
     assert list(ordered_stations["station_id"]) == ["station-1", "station-2"]
     assert list(ordered_stations["stop_sequence"]) == [1, 2]
+
+
+def test_full_line_pattern_includes_morby_centrum_endpoint() -> None:
+    patterns = load_line_patterns()
+    morby_patterns = patterns.loc[
+        patterns["transport_type"].eq("Metro")
+        & patterns["line"].eq("14")
+        & patterns["direction"].str.contains("Mörby", case=False)
+    ]
+
+    assert not morby_patterns.empty
+    for pattern_id in morby_patterns["pattern_id"].unique():
+        ordered = get_stations_for_pattern(patterns, pattern_id)
+        assert ordered.iloc[-1]["station_name"] == "Mörby centrum T-bana"
 
 
 def test_transport_filter_keeps_stations_with_selected_types() -> None:

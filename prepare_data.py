@@ -103,8 +103,8 @@ def classify_transport(
     raise DataPreparationError(f"Unsupported route type: {code or '<missing>'}")
 
 
-def load_stops(raw_data_dir: Path, bounds: dict[str, float]) -> pd.DataFrame:
-    """Load stops with valid coordinates inside the configured map area."""
+def load_all_stops(raw_data_dir: Path) -> pd.DataFrame:
+    """Load every stop with valid coordinates from the supplied feed."""
 
     path = raw_data_dir / "stops.txt"
     stops = pd.read_csv(
@@ -124,6 +124,14 @@ def load_stops(raw_data_dir: Path, bounds: dict[str, float]) -> pd.DataFrame:
             f"{path.name} contains {int(invalid_coordinates.sum())} invalid coordinates"
         )
 
+    return stops[["stop_id", "stop_name", "latitude", "longitude"]].copy()
+
+
+def filter_stops_by_bounds(
+    stops: pd.DataFrame, bounds: dict[str, float]
+) -> pd.DataFrame:
+    """Keep stops inside the configured central Explore map area."""
+
     inside_area = (
         stops["latitude"].between(
             bounds["min_latitude"], bounds["max_latitude"], inclusive="both"
@@ -135,6 +143,12 @@ def load_stops(raw_data_dir: Path, bounds: dict[str, float]) -> pd.DataFrame:
     return stops.loc[
         inside_area, ["stop_id", "stop_name", "latitude", "longitude"]
     ].copy()
+
+
+def load_stops(raw_data_dir: Path, bounds: dict[str, float]) -> pd.DataFrame:
+    """Load stops with valid coordinates inside the configured map area."""
+
+    return filter_stops_by_bounds(load_all_stops(raw_data_dir), bounds)
 
 
 def load_routes(
@@ -207,10 +221,10 @@ def load_trips(raw_data_dir: Path, route_ids: set[str]) -> pd.DataFrame:
 def load_relevant_stop_times(
     raw_data_dir: Path,
     trip_ids: set[str],
-    stop_ids: set[str],
     chunk_size: int,
+    stop_ids: set[str] | None = None,
 ) -> pd.DataFrame:
-    """Stream the large stop-times table and retain only relevant connections."""
+    """Stream stop times for selected trips, optionally limited to stop IDs."""
 
     path = raw_data_dir / "stop_times.txt"
     matches: list[pd.DataFrame] = []
@@ -222,7 +236,9 @@ def load_relevant_stop_times(
         chunksize=chunk_size,
     )
     for chunk in chunks:
-        relevant = chunk["trip_id"].isin(trip_ids) & chunk["stop_id"].isin(stop_ids)
+        relevant = chunk["trip_id"].isin(trip_ids)
+        if stop_ids is not None:
+            relevant &= chunk["stop_id"].isin(stop_ids)
         if relevant.any():
             matches.append(
                 chunk.loc[relevant, ["trip_id", "stop_id", "stop_sequence"]]
@@ -345,6 +361,13 @@ def build_line_patterns(
     assignments["station_id"] = assignments["station_id"].fillna(
         assignments["stop_id"]
     )
+    assignments["station_name"] = assignments["station_name"].fillna(
+        assignments["stop_name"]
+    )
+    station_metadata = (
+        assignments.groupby(["station_id", "station_name"], as_index=False)
+        .agg(latitude=("latitude", "mean"), longitude=("longitude", "mean"))
+    )
 
     ordered_stops = stop_times.merge(
         trips, on="trip_id", how="inner", validate="many_to_one"
@@ -414,8 +437,30 @@ def build_line_patterns(
     ]
     patterns = pd.DataFrame(pattern_rows, columns=columns)
     if patterns.empty:
-        return patterns
-    return patterns.sort_values(
+        return patterns.assign(
+            station_name=pd.Series(dtype=str),
+            latitude=pd.Series(dtype=float),
+            longitude=pd.Series(dtype=float),
+        )
+    patterns = patterns.merge(
+        station_metadata,
+        on="station_id",
+        how="inner",
+        validate="many_to_one",
+    )
+    output_columns = [
+        "pattern_id",
+        "route_id",
+        "transport_type",
+        "line",
+        "direction",
+        "station_id",
+        "station_name",
+        "latitude",
+        "longitude",
+        "stop_sequence",
+    ]
+    return patterns[output_columns].sort_values(
         ["transport_type", "line", "direction", "pattern_id", "stop_sequence"],
         kind="stable",
     ).reset_index(drop=True)
@@ -449,6 +494,9 @@ def validate_outputs(
             "line",
             "direction",
             "station_id",
+            "station_name",
+            "latitude",
+            "longitude",
             "stop_sequence",
         },
         "line-patterns output",
@@ -485,12 +533,13 @@ def validate_outputs(
             "Generated services refer to station IDs missing from stations.csv"
         )
 
-    unknown_pattern_station_ids = set(line_patterns["station_id"]) - set(
-        stations["station_id"]
+    invalid_pattern_coordinates = (
+        ~line_patterns["latitude"].between(-90, 90, inclusive="both")
+        | ~line_patterns["longitude"].between(-180, 180, inclusive="both")
     )
-    if unknown_pattern_station_ids:
+    if invalid_pattern_coordinates.any():
         raise DataPreparationError(
-            "Generated line patterns refer to station IDs missing from stations.csv"
+            "Generated line patterns contain invalid station coordinates"
         )
 
     for pattern_id, pattern in line_patterns.groupby("pattern_id"):
@@ -543,19 +592,24 @@ def prepare_data(
     output_dir = Path(output_dir)
     station_groups_path = Path(station_groups_path)
 
-    stops = load_stops(raw_data_dir, bounds)
+    all_stops = load_all_stops(raw_data_dir)
+    stops = filter_stops_by_bounds(all_stops, bounds)
     routes = load_routes(raw_data_dir, bus_lines)
     trips = load_trips(raw_data_dir, set(routes["route_id"]))
-    stop_times = load_relevant_stop_times(
+    all_stop_times = load_relevant_stop_times(
         raw_data_dir,
         set(trips["trip_id"]),
-        set(stops["stop_id"]),
         chunk_size,
     )
+    stop_times = all_stop_times.loc[
+        all_stop_times["stop_id"].isin(set(stops["stop_id"]))
+    ].copy()
     stop_services = build_stop_services(stop_times, trips, routes)
     groups = load_station_groups(station_groups_path)
     stations, services = group_stations(stops, stop_services, groups)
-    line_patterns = build_line_patterns(stops, stop_times, trips, routes, groups)
+    line_patterns = build_line_patterns(
+        all_stops, all_stop_times, trips, routes, groups
+    )
     validate_outputs(
         stations, services, line_patterns, min_stations, max_stations
     )

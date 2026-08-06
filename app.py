@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections.abc import Mapping
+import math
 from typing import Any
 
 import pandas as pd
@@ -143,10 +144,19 @@ def build_line_pattern_map(ordered_stations: pd.DataFrame) -> pdk.Deck:
         filled=True,
         pickable=True,
     )
+    latitude_span = float(
+        ordered_stations["latitude"].max() - ordered_stations["latitude"].min()
+    )
+    longitude_span = float(
+        ordered_stations["longitude"].max() - ordered_stations["longitude"].min()
+    )
+    # Longitude degrees are geographically narrower at Stockholm's latitude.
+    geographic_span = max(latitude_span, longitude_span * 0.52, 0.001)
+    zoom = max(6.0, min(13.0, 10.3 - math.log2(geographic_span / 0.1)))
     view = pdk.ViewState(
         latitude=float(ordered_stations["latitude"].mean()),
         longitude=float(ordered_stations["longitude"].mean()),
-        zoom=11.5,
+        zoom=zoom,
         pitch=0,
     )
     return pdk.Deck(
@@ -412,9 +422,7 @@ def render_compare_tab(stations: pd.DataFrame, services: pd.DataFrame) -> None:
     render_shared_lines(get_shared_lines(services, first_id, second_id))
 
 
-def render_line_tab(
-    stations: pd.DataFrame, line_patterns: pd.DataFrame
-) -> None:
+def render_line_tab(line_patterns: pd.DataFrame) -> None:
     """Render all stations associated with a selected line."""
 
     st.write("Choose a transport type and line to see its stations in this dataset.")
@@ -474,7 +482,7 @@ def render_line_tab(
         return
 
     ordered_stations = get_stations_for_pattern(
-        stations, line_patterns, selected_pattern_id
+        line_patterns, selected_pattern_id
     )
     st.metric("Stations found", len(ordered_stations))
     st.caption(
@@ -565,7 +573,7 @@ def main() -> None:
     with compare_tab:
         render_compare_tab(stations, services)
     with line_tab:
-        render_line_tab(stations, line_patterns)
+        render_line_tab(line_patterns)
     with direct_tab:
         render_direct_connection_tab(stations, services)
 

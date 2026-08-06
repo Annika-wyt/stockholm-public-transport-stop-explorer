@@ -1,5 +1,5 @@
-pattern_id,route_id,transport_type,line,direction,station_id,stop_sequence
-metro-pattern,metro-route,Metro,10,Hjulsta,station-1,1
-metro-pattern,metro-route,Metro,10,Hjulsta,station-2,2
-bus-pattern,bus-route,Bus,1,Frihamnen,station-2,1
-bus-pattern,bus-route,Bus,1,Frihamnen,station-4,2
+pattern_id,route_id,transport_type,line,direction,station_id,station_name,latitude,longitude,stop_sequence
+metro-pattern,metro-route,Metro,10,Hjulsta,station-1,Central,59.33,18.05,1
+metro-pattern,metro-route,Metro,10,Hjulsta,station-2,Square,59.34,18.06,2
+bus-pattern,bus-route,Bus,1,Frihamnen,station-2,Square,59.34,18.06,1
+bus-pattern,bus-route,Bus,1,Frihamnen,station-4,Unknown station,59.35,18.08,2

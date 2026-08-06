@@ -185,14 +185,15 @@ class PrepareDataTests(unittest.TestCase):
         self.assertEqual(station_records[1]["station_id"], "stop-c")
         self.assertEqual(station_records[1]["station_name"], "Square")
         self.assertEqual(len(services), 4)
-        self.assertEqual(line_patterns["pattern_id"].nunique(), 2)
-        self.assertEqual(
-            line_patterns.groupby("pattern_id")["stop_sequence"].apply(list).tolist(),
-            [[1, 2], [1, 2]],
+        self.assertEqual(line_patterns["pattern_id"].nunique(), 3)
+        pattern_lengths = sorted(
+            line_patterns.groupby("pattern_id")["stop_sequence"].size()
         )
+        self.assertEqual(pattern_lengths, [2, 2, 3])
         self.assertEqual(
-            set(line_patterns["station_id"]), {"central", "stop-c"}
+            set(line_patterns["station_id"]), {"central", "stop-c", "outside"}
         )
+        self.assertIn("Outside", set(line_patterns["station_name"]))
         self.assertTrue((output_dir / "stations.csv").exists())
         self.assertTrue((output_dir / "stop_services.csv").exists())
         self.assertTrue((output_dir / "line_patterns.csv").exists())
@@ -227,6 +228,9 @@ class PrepareDataTests(unittest.TestCase):
                     "line": "10",
                     "direction": "Hjulsta",
                     "station_id": "known",
+                    "station_name": "Known",
+                    "latitude": 59.33,
+                    "longitude": 18.05,
                     "stop_sequence": 1,
                 },
                 {
@@ -236,6 +240,9 @@ class PrepareDataTests(unittest.TestCase):
                     "line": "10",
                     "direction": "Hjulsta",
                     "station_id": "known",
+                    "station_name": "Known",
+                    "latitude": 59.33,
+                    "longitude": 18.05,
                     "stop_sequence": 2,
                 },
             ]
