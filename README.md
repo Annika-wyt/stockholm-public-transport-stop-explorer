@@ -4,6 +4,20 @@ A beginner-friendly Python and Streamlit project for exploring public transport
 stops in Stockholm. A user will select a stop on a map and see the transport
 types, line numbers, and destinations serving it.
 
+## Camp branches
+
+This repository contains differentiated starting points for an AI-assisted
+programming camp:
+
+- `option-1-greenfield`: a simplified travel-planner brief and prepared data,
+  with no solution code.
+- `option-2-barebones`: a launching starter app, function TODOs, and checkpoint
+  tests.
+- `option-3-mvp`: the completed Stop Explorer plus an extension guide.
+- `main`: the complete mentor reference, including preprocessing and all tests.
+
+Students can change tracks if they need more or less structure.
+
 ## Project status
 
 Phases 1 through 4 are complete. The project includes the mentor-owned GTFS
