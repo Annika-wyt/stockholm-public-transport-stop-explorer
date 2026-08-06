@@ -84,6 +84,7 @@ def test_streamlit_app_starts_without_exceptions() -> None:
     app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
 
     assert not app.exception
+    assert not app.code
     assert app.title[0].value == "Stockholm Public Transport Stop Explorer"
     assert "select one of the pink map markers" in app.info[0].value
     assert [tab.label for tab in app.tabs] == [
