@@ -1,150 +1,140 @@
-# Stockholm Public Transport Stop Explorer
+# Option 1: Greenfield Stockholm Travel Challenge
 
-A beginner-friendly Python and Streamlit project for exploring public transport
-stops in Stockholm. A user will select a stop on a map and see the transport
-types, line numbers, and destinations serving it.
+Design and build your own Python application that helps someone investigate a
+public-transport journey in Stockholm. You receive the idea, prepared static
+data, and acceptance criteria—but no application code.
 
-## Project status
+This is the most independent option. Decide how your application should work,
+break the problem into small tasks, and use AI as a programming partner.
 
-Phases 1 through 4 are complete. The project includes the mentor-owned GTFS
-preprocessing pipeline, beginner-facing data functions, and the interactive
-Streamlit application.
+## The idea
 
-## Project structure
+A user selects an origin station and a destination station. The application
+looks for transport lines that serve both stations and displays possible direct
+connections.
+
+For example:
 
 ```text
-.
-├── app.py                     # Streamlit map and results interface
-├── transport_data.py          # Student-facing data functions
-├── prepare_data.py            # Mentor-owned GTFS preparation
-├── requirements.txt
-├── pyproject.toml             # Pytest configuration
-├── data/
-│   ├── stations.csv           # Generated map stations
-│   ├── stop_services.csv      # Generated services for each station
-│   └── station_groups.csv     # Manual grouping rules for related stops
-├── tests/
-│   ├── fixtures/
-│   ├── test_prepare_data.py
-│   └── test_transport_data.py
-└── sweden-20260801/           # Original GTFS snapshot
+From: Stockholm Central / T-Centralen
+To: Slussen
+
+Possible direct services:
+Metro 13
+Metro 14
+Bus 53
 ```
 
-## Data files
+If no shared service is found, give the user a clear message instead of
+crashing.
 
-The application will use two small generated files instead of reading the full
-GTFS feed at runtime.
+## Important scope
 
-`data/stations.csv`:
+This is a simplified, static travel-planner idea. The prepared data can show
+that the same line serves two stations, but it does not contain live departures,
+travel times, disruptions, or complete ordered route patterns. Describe results
+as **possible direct services**, not guaranteed real-time journeys.
+
+A timetable-aware journey planner is outside the minimum project scope.
+
+## Prepared data
+
+`data/stations.csv` contains 283 stations:
 
 ```csv
 station_id,station_name,latitude,longitude
 ```
 
-`data/stop_services.csv`:
+`data/stop_services.csv` contains 2,038 unique service combinations:
 
 ```csv
 station_id,transport_type,line,destination
 ```
 
-`data/station_groups.csv` is a mentor-maintained input for combining related
-GTFS stops into one map station:
+The files share the `station_id` column. Read IDs as strings so leading zeros or
+other formatting cannot be lost.
 
-```csv
-stop_id,station_id,station_name
-```
+The original 1.1 GB national GTFS feed is deliberately not included.
 
-Stops not listed in `station_groups.csv` will keep their original GTFS stop ID.
+## Minimum acceptance criteria
 
-## Preparing the data
+- The application launches locally.
+- The user can select two different stations.
+- Both station names are displayed.
+- Possible shared transport-type/line combinations are displayed.
+- Duplicate connections are removed.
+- A helpful message appears when no direct connection is found.
+- Empty or invalid selections do not crash the application.
+- At least one important function has an automated test.
 
-From this directory, run:
+## Suggested development milestones
 
-```bash
-python prepare_data.py
-```
+1. Create `app.py` and display a Streamlit title.
+2. Load and inspect both CSV files with pandas.
+3. Add origin and destination selection boxes.
+4. Find services for the origin.
+5. Find services for the destination.
+6. Match rows using both `transport_type` and `line`.
+7. Display possible direct services.
+8. Handle identical stations and no-match results.
+9. Add a test and improve the interface.
 
-The raw national snapshot is intentionally excluded from Git because it is
-about 1.1 GB and contains files larger than GitHub permits. Mentors who want to
-regenerate the prepared CSVs should place the GTFS files in
-`sweden-20260801/`. Students do not need the raw snapshot.
+You may organize the code differently if you can explain your design.
 
-The script:
+## Optional directions
 
-1. Keeps SL routes (`agency_id` 275) in central Stockholm.
-2. Includes metro, commuter and local trains, trams, ferries, and a curated set
-   of central bus lines.
-3. Reads the large `stop_times.txt` file in chunks.
-4. Uses each trip's headsign as its destination.
-5. Applies the explicit grouping rules in `data/station_groups.csv`.
-6. Removes duplicates and validates the result before writing the app data.
+- Add a station map.
+- Show all lines at the origin and destination.
+- Compare the two stations.
+- Filter by transport type.
+- Find possible one-transfer connections as an experimental feature.
+- Let the user save favourite journeys during the current session.
 
-The geographic bounds and selected bus lines are constants near the top of
-`prepare_data.py`, making the camp scope easy for mentors to adjust. The script
-does not filter by operating date because the explorer describes the static
-feed rather than departures on a particular day.
-
-With the supplied snapshot and current settings, the generated dataset contains
-283 map stations and 2,038 unique station/type/line/destination combinations.
-
-## Using the prepared data
-
-`transport_data.py` contains the functions students will use from the app:
-
-```python
-from transport_data import (
-    get_services_for_station,
-    get_station,
-    get_station_summary,
-    group_services_by_type,
-    load_services,
-    load_stations,
-)
-
-stations = load_stations()
-services = load_services()
-
-station = get_station(stations, "stockholm-central")
-selected = get_services_for_station(services, "stockholm-central")
-summary = get_station_summary(selected)
-groups = group_services_by_type(selected)
-```
-
-The loading functions remove duplicate rows, ignore unusable station rows, and
-replace missing labels with readable values such as `Unknown destination`.
-
-## Running the application
-
-Start the local application from this directory:
+## Setup
 
 ```bash
-python -m streamlit run app.py
-```
-
-Then open `http://localhost:8501` if the browser does not open automatically.
-Click a pink station marker to display its transport types, line numbers, and
-destinations. The application reads only the two prepared CSV files; it does not
-load the national GTFS files at runtime.
-
-## Project commands
-
-Use Python 3.10 or newer. On the camp Ubuntu environment, create the virtual
-environment explicitly with `python3.10` so it does not use the older system
-Python 3.8:
-
-```bash
-python3.10 --version
 python3.10 -m venv .venv
 source .venv/bin/activate
-python --version
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
-python prepare_data.py
-pytest
+```
+
+You will create the application files yourself. A common launch command is:
+
+```bash
 python -m streamlit run app.py
 ```
 
-## Scope
+## AI working agreement
 
-The application will use static data from the 1 August 2026 GTFS snapshot. It
-will not provide live departures, disruption information, or journey planning.
+- Ask AI to solve one milestone at a time.
+- Run the application after each change.
+- Paste complete error messages when asking for debugging help.
+- Ask AI to explain unfamiliar code in beginner language.
+- Keep a short record of your most useful prompts.
+- Do not submit code you cannot explain.
+
+Prompt template:
+
+```text
+I am a beginner Python student building a simplified public-transport planner.
+
+Current milestone:
+[one milestone]
+
+Available CSV columns:
+[relevant columns]
+
+Acceptance criteria:
+[observable result]
+
+Please suggest the smallest implementation for this milestone, explain it in
+beginner language, and give me a command or test that verifies it.
+```
+
+## Final demonstration
+
+Show a journey with a possible direct service, a pair without a direct service,
+and one error case. Be ready to explain how your application matches lines
+between the two stations.
+
