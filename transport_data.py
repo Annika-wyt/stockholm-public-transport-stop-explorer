@@ -16,9 +16,19 @@ PROJECT_DIR = Path(__file__).resolve().parent
 DATA_DIR = PROJECT_DIR / "data"
 STATIONS_FILE = DATA_DIR / "stations.csv"
 SERVICES_FILE = DATA_DIR / "stop_services.csv"
+LINE_PATTERNS_FILE = DATA_DIR / "line_patterns.csv"
 
 STATION_COLUMNS = ["station_id", "station_name", "latitude", "longitude"]
 SERVICE_COLUMNS = ["station_id", "transport_type", "line", "destination"]
+LINE_PATTERN_COLUMNS = [
+    "pattern_id",
+    "route_id",
+    "transport_type",
+    "line",
+    "direction",
+    "station_id",
+    "stop_sequence",
+]
 
 TRANSPORT_TYPE_ORDER = [
     "Metro",
@@ -102,6 +112,31 @@ def load_services(file_path: str | Path = SERVICES_FILE) -> pd.DataFrame:
     )
 
     return services.drop_duplicates(ignore_index=True)
+
+
+def load_line_patterns(file_path: str | Path = LINE_PATTERNS_FILE) -> pd.DataFrame:
+    """Load ordered station patterns generated from GTFS stop sequences."""
+
+    patterns = _read_csv(file_path, LINE_PATTERN_COLUMNS)
+    text_columns = [column for column in LINE_PATTERN_COLUMNS if column != "stop_sequence"]
+    for column in text_columns:
+        patterns[column] = patterns[column].str.strip()
+
+    patterns["stop_sequence"] = pd.to_numeric(
+        patterns["stop_sequence"], errors="coerce"
+    )
+    valid_rows = (
+        patterns[text_columns].ne("").all(axis=1)
+        & patterns["stop_sequence"].notna()
+        & patterns["stop_sequence"].ge(1)
+    )
+    patterns = patterns.loc[valid_rows].copy()
+    patterns["stop_sequence"] = patterns["stop_sequence"].astype(int)
+    return (
+        patterns.drop_duplicates(subset=["pattern_id", "stop_sequence"])
+        .sort_values(["pattern_id", "stop_sequence"], kind="stable")
+        .reset_index(drop=True)
+    )
 
 
 def get_station(
@@ -228,3 +263,34 @@ def get_shared_lines(
         .drop(columns="_type_order")
         .reset_index(drop=True)
     )
+
+
+def get_patterns_for_line(
+    line_patterns: pd.DataFrame,
+    transport_type: str,
+    line: str,
+) -> pd.DataFrame:
+    """Return ordered-pattern rows for one transport-type/line pair."""
+
+    return line_patterns.loc[
+        line_patterns["transport_type"].eq(str(transport_type).strip())
+        & line_patterns["line"].eq(str(line).strip())
+    ].reset_index(drop=True)
+
+
+def get_stations_for_pattern(
+    stations: pd.DataFrame,
+    line_patterns: pd.DataFrame,
+    pattern_id: str,
+) -> pd.DataFrame:
+    """Return station coordinates in the stop order of one selected pattern."""
+
+    selected_pattern = line_patterns.loc[
+        line_patterns["pattern_id"].eq(str(pattern_id).strip())
+    ].sort_values("stop_sequence", kind="stable")
+    return selected_pattern.merge(
+        stations,
+        on="station_id",
+        how="inner",
+        validate="many_to_one",
+    ).reset_index(drop=True)

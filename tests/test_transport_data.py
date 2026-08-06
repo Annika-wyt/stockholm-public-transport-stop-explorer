@@ -11,11 +11,14 @@ from transport_data import (
     TransportDataError,
     filter_stations_by_transport,
     get_services_for_station,
+    get_patterns_for_line,
     get_shared_lines,
     get_station,
     get_station_summary,
     get_stations_for_line,
+    get_stations_for_pattern,
     group_services_by_type,
+    load_line_patterns,
     load_services,
     load_stations,
 )
@@ -85,11 +88,28 @@ def test_missing_columns_raise_a_clear_error(tmp_path: Path) -> None:
 def test_real_generated_data_is_queryable() -> None:
     stations = load_stations()
     services = load_services()
+    line_patterns = load_line_patterns()
 
     assert len(stations) == 283
     assert len(services) == 2_038
+    assert len(line_patterns) == 3_476
+    assert line_patterns["pattern_id"].nunique() == 282
     assert get_station(stations, "stockholm-central") is not None
     assert not get_services_for_station(services, "stockholm-central").empty
+
+
+def test_ordered_line_patterns_load_and_join_to_station_coordinates() -> None:
+    stations = load_stations(FIXTURES_DIR / "stations.csv")
+    patterns = load_line_patterns(FIXTURES_DIR / "line_patterns.csv")
+
+    metro_patterns = get_patterns_for_line(patterns, "Metro", "10")
+    ordered_stations = get_stations_for_pattern(
+        stations, patterns, "metro-pattern"
+    )
+
+    assert len(metro_patterns) == 2
+    assert list(ordered_stations["station_id"]) == ["station-1", "station-2"]
+    assert list(ordered_stations["stop_sequence"]) == [1, 2]
 
 
 def test_transport_filter_keeps_stations_with_selected_types() -> None:

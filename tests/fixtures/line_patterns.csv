@@ -1,0 +1,5 @@
+pattern_id,route_id,transport_type,line,direction,station_id,stop_sequence
+metro-pattern,metro-route,Metro,10,Hjulsta,station-1,1
+metro-pattern,metro-route,Metro,10,Hjulsta,station-2,2
+bus-pattern,bus-route,Bus,1,Frihamnen,station-2,1
+bus-pattern,bus-route,Bus,1,Frihamnen,station-4,2

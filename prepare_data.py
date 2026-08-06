@@ -7,6 +7,7 @@ instead of loading the multi-million-row GTFS feed in the Streamlit app.
 from __future__ import annotations
 
 import argparse
+import hashlib
 from pathlib import Path
 from typing import Iterable
 
@@ -217,17 +218,26 @@ def load_relevant_stop_times(
     chunks = pd.read_csv(
         path,
         dtype=str,
-        usecols=["trip_id", "stop_id"],
+        usecols=["trip_id", "stop_id", "stop_sequence"],
         chunksize=chunk_size,
     )
     for chunk in chunks:
         relevant = chunk["trip_id"].isin(trip_ids) & chunk["stop_id"].isin(stop_ids)
         if relevant.any():
-            matches.append(chunk.loc[relevant, ["trip_id", "stop_id"]])
+            matches.append(
+                chunk.loc[relevant, ["trip_id", "stop_id", "stop_sequence"]]
+            )
 
     if not matches:
-        return pd.DataFrame(columns=["trip_id", "stop_id"])
-    return pd.concat(matches, ignore_index=True)
+        return pd.DataFrame(columns=["trip_id", "stop_id", "stop_sequence"])
+
+    stop_times = pd.concat(matches, ignore_index=True)
+    stop_times["stop_sequence"] = pd.to_numeric(
+        stop_times["stop_sequence"], errors="coerce"
+    )
+    if stop_times["stop_sequence"].isna().any():
+        raise DataPreparationError("stop_times.txt contains invalid stop_sequence values")
+    return stop_times
 
 
 def build_stop_services(
@@ -322,9 +332,99 @@ def group_stations(
     return stations, services
 
 
+def build_line_patterns(
+    stops: pd.DataFrame,
+    stop_times: pd.DataFrame,
+    trips: pd.DataFrame,
+    routes: pd.DataFrame,
+    groups: pd.DataFrame,
+) -> pd.DataFrame:
+    """Create unique ordered station patterns from GTFS trip stop sequences."""
+
+    assignments = stops.merge(groups, on="stop_id", how="left")
+    assignments["station_id"] = assignments["station_id"].fillna(
+        assignments["stop_id"]
+    )
+
+    ordered_stops = stop_times.merge(
+        trips, on="trip_id", how="inner", validate="many_to_one"
+    )
+    ordered_stops = ordered_stops.merge(
+        routes, on="route_id", how="inner", validate="many_to_one"
+    )
+    ordered_stops = ordered_stops.merge(
+        assignments[["stop_id", "station_id"]],
+        on="stop_id",
+        how="inner",
+        validate="many_to_one",
+    )
+    ordered_stops = ordered_stops.sort_values(
+        ["trip_id", "stop_sequence"], kind="stable"
+    )
+
+    pattern_rows: list[dict[str, object]] = []
+    seen_patterns: set[tuple[str, str, tuple[str, ...]]] = set()
+
+    for _, trip_stops in ordered_stops.groupby("trip_id", sort=False):
+        station_sequence: list[str] = []
+        for station_id in trip_stops["station_id"]:
+            if not station_sequence or station_sequence[-1] != station_id:
+                station_sequence.append(station_id)
+
+        if len(station_sequence) < 2:
+            continue
+
+        first_row = trip_stops.iloc[0]
+        route_id = _clean_text(first_row["route_id"])
+        direction = _clean_text(first_row["trip_headsign"]) or "Unknown destination"
+        signature = (route_id, direction, tuple(station_sequence))
+        if signature in seen_patterns:
+            continue
+        seen_patterns.add(signature)
+
+        signature_text = "\x1f".join(
+            [route_id, direction, *station_sequence]
+        ).encode("utf-8")
+        pattern_id = f"pattern-{hashlib.sha1(signature_text).hexdigest()[:12]}"
+        line = _clean_text(first_row["route_short_name"])
+        if not line:
+            line = _clean_text(first_row["route_long_name"]) or "Unknown line"
+
+        for sequence, station_id in enumerate(station_sequence, start=1):
+            pattern_rows.append(
+                {
+                    "pattern_id": pattern_id,
+                    "route_id": route_id,
+                    "transport_type": first_row["transport_type"],
+                    "line": line,
+                    "direction": direction,
+                    "station_id": station_id,
+                    "stop_sequence": sequence,
+                }
+            )
+
+    columns = [
+        "pattern_id",
+        "route_id",
+        "transport_type",
+        "line",
+        "direction",
+        "station_id",
+        "stop_sequence",
+    ]
+    patterns = pd.DataFrame(pattern_rows, columns=columns)
+    if patterns.empty:
+        return patterns
+    return patterns.sort_values(
+        ["transport_type", "line", "direction", "pattern_id", "stop_sequence"],
+        kind="stable",
+    ).reset_index(drop=True)
+
+
 def validate_outputs(
     stations: pd.DataFrame,
     services: pd.DataFrame,
+    line_patterns: pd.DataFrame,
     min_stations: int = 20,
     max_stations: int = 300,
 ) -> None:
@@ -339,6 +439,19 @@ def validate_outputs(
         services,
         {"station_id", "transport_type", "line", "destination"},
         "stop-services output",
+    )
+    _require_columns(
+        line_patterns,
+        {
+            "pattern_id",
+            "route_id",
+            "transport_type",
+            "line",
+            "direction",
+            "station_id",
+            "stop_sequence",
+        },
+        "line-patterns output",
     )
 
     if not min_stations <= len(stations) <= max_stations:
@@ -357,6 +470,14 @@ def validate_outputs(
         raise DataPreparationError("Generated services contain missing values")
     if services.duplicated().any():
         raise DataPreparationError("Generated services contain duplicate rows")
+    if line_patterns.empty:
+        raise DataPreparationError("No ordered line patterns were generated")
+    if line_patterns.isna().any().any():
+        raise DataPreparationError("Generated line patterns contain missing values")
+    if line_patterns.duplicated(subset=["pattern_id", "stop_sequence"]).any():
+        raise DataPreparationError(
+            "Generated line patterns contain duplicate pattern sequences"
+        )
 
     unknown_station_ids = set(services["station_id"]) - set(stations["station_id"])
     if unknown_station_ids:
@@ -364,9 +485,28 @@ def validate_outputs(
             "Generated services refer to station IDs missing from stations.csv"
         )
 
+    unknown_pattern_station_ids = set(line_patterns["station_id"]) - set(
+        stations["station_id"]
+    )
+    if unknown_pattern_station_ids:
+        raise DataPreparationError(
+            "Generated line patterns refer to station IDs missing from stations.csv"
+        )
+
+    for pattern_id, pattern in line_patterns.groupby("pattern_id"):
+        expected_sequence = list(range(1, len(pattern) + 1))
+        actual_sequence = sorted(pattern["stop_sequence"].astype(int))
+        if len(pattern) < 2 or actual_sequence != expected_sequence:
+            raise DataPreparationError(
+                f"Pattern {pattern_id} does not contain a valid consecutive stop order"
+            )
+
 
 def write_outputs(
-    stations: pd.DataFrame, services: pd.DataFrame, output_dir: Path
+    stations: pd.DataFrame,
+    services: pd.DataFrame,
+    line_patterns: pd.DataFrame,
+    output_dir: Path,
 ) -> None:
     """Write each validated application table with an atomic file replacement."""
 
@@ -374,6 +514,7 @@ def write_outputs(
     for table, filename in (
         (stations, "stations.csv"),
         (services, "stop_services.csv"),
+        (line_patterns, "line_patterns.csv"),
     ):
         destination = output_dir / filename
         temporary_path = destination.with_suffix(f"{destination.suffix}.tmp")
@@ -395,7 +536,7 @@ def prepare_data(
     chunk_size: int = 500_000,
     min_stations: int = 20,
     max_stations: int = 300,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     """Run the complete preparation pipeline and return the generated tables."""
 
     raw_data_dir = Path(raw_data_dir)
@@ -414,9 +555,12 @@ def prepare_data(
     stop_services = build_stop_services(stop_times, trips, routes)
     groups = load_station_groups(station_groups_path)
     stations, services = group_stations(stops, stop_services, groups)
-    validate_outputs(stations, services, min_stations, max_stations)
-    write_outputs(stations, services, output_dir)
-    return stations, services
+    line_patterns = build_line_patterns(stops, stop_times, trips, routes, groups)
+    validate_outputs(
+        stations, services, line_patterns, min_stations, max_stations
+    )
+    write_outputs(stations, services, line_patterns, output_dir)
+    return stations, services, line_patterns
 
 
 def parse_args() -> argparse.Namespace:
@@ -434,7 +578,7 @@ def parse_args() -> argparse.Namespace:
 
 def main() -> None:
     args = parse_args()
-    stations, services = prepare_data(
+    stations, services, line_patterns = prepare_data(
         raw_data_dir=args.raw_data_dir,
         output_dir=args.output_dir,
         station_groups_path=args.station_groups,
@@ -442,11 +586,16 @@ def main() -> None:
     )
 
     print(f"Created {len(stations)} stations and {len(services)} services.")
+    print(
+        f"Created {line_patterns['pattern_id'].nunique()} ordered line patterns "
+        f"with {len(line_patterns)} stops."
+    )
     print("Transport types:")
     for transport_type, count in services.groupby("transport_type").size().items():
         print(f"  {transport_type}: {count}")
     print(f"Wrote {args.output_dir / 'stations.csv'}")
     print(f"Wrote {args.output_dir / 'stop_services.csv'}")
+    print(f"Wrote {args.output_dir / 'line_patterns.csv'}")
 
 
 if __name__ == "__main__":

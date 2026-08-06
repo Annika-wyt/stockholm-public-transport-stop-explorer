@@ -36,6 +36,7 @@ Streamlit application.
 ├── data/
 │   ├── stations.csv           # Generated map stations
 │   ├── stop_services.csv      # Generated services for each station
+│   ├── line_patterns.csv      # Ordered stops for unique trip patterns
 │   └── station_groups.csv     # Manual grouping rules for related stops
 ├── tests/
 │   ├── fixtures/
@@ -46,7 +47,7 @@ Streamlit application.
 
 ## Data files
 
-The application will use two small generated files instead of reading the full
+The application uses three small generated files instead of reading the full
 GTFS feed at runtime.
 
 `data/stations.csv`:
@@ -59,6 +60,13 @@ station_id,station_name,latitude,longitude
 
 ```csv
 station_id,transport_type,line,destination
+```
+
+`data/line_patterns.csv` preserves GTFS stop order for each unique direction and
+trip pattern:
+
+```csv
+pattern_id,route_id,transport_type,line,direction,station_id,stop_sequence
 ```
 
 `data/station_groups.csv` is a mentor-maintained input for combining related
@@ -91,7 +99,8 @@ The script:
 3. Reads the large `stop_times.txt` file in chunks.
 4. Uses each trip's headsign as its destination.
 5. Applies the explicit grouping rules in `data/station_groups.csv`.
-6. Removes duplicates and validates the result before writing the app data.
+6. Groups trips with identical ordered station sequences into stable patterns.
+7. Removes duplicates and validates the result before writing the app data.
 
 The geographic bounds and selected bus lines are constants near the top of
 `prepare_data.py`, making the camp scope easy for mentors to adjust. The script
@@ -99,7 +108,8 @@ does not filter by operating date because the explorer describes the static
 feed rather than departures on a particular day.
 
 With the supplied snapshot and current settings, the generated dataset contains
-283 map stations and 2,038 unique station/type/line/destination combinations.
+283 map stations, 2,038 unique station/type/line/destination combinations, and
+282 ordered line patterns containing 3,476 stops.
 
 ## Using the prepared data
 
@@ -137,7 +147,7 @@ python -m streamlit run app.py
 
 Then open `http://localhost:8501` if the browser does not open automatically.
 Click a pink station marker to display its transport types, line numbers, and
-destinations. The application reads only the two prepared CSV files; it does not
+destinations. The application reads only the three prepared CSV files; it does not
 load the national GTFS files at runtime.
 
 The completed interface includes:
@@ -146,11 +156,16 @@ The completed interface includes:
 - Filter map markers by transport type.
 - Compare the transport types, lines, and destinations at two stations.
 - Select a transport-type/line pair and display every matching station.
+- Select a direction/trip pattern and connect its stations in GTFS stop order.
 - Check whether two stations share possible direct services.
 
 The direct-connection result is based on shared static line data. It does not
 verify live schedules, direction, disruptions, or travel time and should not be
 presented as real-time journey advice.
+
+Line Explorer paths are straight segments between station centres. They use
+GTFS `stop_sequence` for order but do not represent exact road, track, or ferry
+geometry because the supplied snapshot has no `shapes.txt` file.
 
 ## Project commands
 

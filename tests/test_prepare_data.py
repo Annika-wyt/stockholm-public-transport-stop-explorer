@@ -65,6 +65,12 @@ class PrepareDataTests(unittest.TestCase):
                     "stop_lon": 18.051,
                 },
                 {
+                    "stop_id": "stop-c",
+                    "stop_name": "Square",
+                    "stop_lat": 59.332,
+                    "stop_lon": 18.052,
+                },
+                {
                     "stop_id": "outside",
                     "stop_name": "Outside",
                     "stop_lat": 60.0,
@@ -129,11 +135,18 @@ class PrepareDataTests(unittest.TestCase):
             raw_dir,
             "stop_times.txt",
             [
-                {"trip_id": "metro-1", "stop_id": "stop-a"},
-                {"trip_id": "metro-2", "stop_id": "stop-a"},
-                {"trip_id": "bus-1", "stop_id": "stop-b"},
-                {"trip_id": "excluded-1", "stop_id": "stop-a"},
-                {"trip_id": "metro-1", "stop_id": "outside"},
+                {"trip_id": "metro-1", "stop_id": "stop-a", "stop_sequence": 1},
+                {"trip_id": "metro-1", "stop_id": "stop-c", "stop_sequence": 2},
+                {"trip_id": "metro-2", "stop_id": "stop-a", "stop_sequence": 1},
+                {"trip_id": "metro-2", "stop_id": "stop-c", "stop_sequence": 2},
+                {"trip_id": "bus-1", "stop_id": "stop-b", "stop_sequence": 1},
+                {"trip_id": "bus-1", "stop_id": "stop-c", "stop_sequence": 2},
+                {
+                    "trip_id": "excluded-1",
+                    "stop_id": "stop-a",
+                    "stop_sequence": 1,
+                },
+                {"trip_id": "metro-1", "stop_id": "outside", "stop_sequence": 3},
             ],
         )
         groups_path = output_dir / "station_groups.csv"
@@ -154,7 +167,7 @@ class PrepareDataTests(unittest.TestCase):
             ],
         )
 
-        stations, services = prepare_data(
+        stations, services, line_patterns = prepare_data(
             raw_data_dir=raw_dir,
             output_dir=output_dir,
             station_groups_path=groups_path,
@@ -164,30 +177,25 @@ class PrepareDataTests(unittest.TestCase):
         )
 
         station_records = stations.to_dict("records")
-        self.assertEqual(len(station_records), 1)
+        self.assertEqual(len(station_records), 2)
         self.assertEqual(station_records[0]["station_id"], "central")
         self.assertEqual(station_records[0]["station_name"], "Central")
         self.assertAlmostEqual(station_records[0]["latitude"], 59.3305)
         self.assertAlmostEqual(station_records[0]["longitude"], 18.0505)
+        self.assertEqual(station_records[1]["station_id"], "stop-c")
+        self.assertEqual(station_records[1]["station_name"], "Square")
+        self.assertEqual(len(services), 4)
+        self.assertEqual(line_patterns["pattern_id"].nunique(), 2)
         self.assertEqual(
-            services.to_dict("records"),
-            [
-                {
-                    "station_id": "central",
-                    "transport_type": "Bus",
-                    "line": "1",
-                    "destination": "Frihamnen",
-                },
-                {
-                    "station_id": "central",
-                    "transport_type": "Metro",
-                    "line": "10",
-                    "destination": "Hjulsta",
-                },
-            ],
+            line_patterns.groupby("pattern_id")["stop_sequence"].apply(list).tolist(),
+            [[1, 2], [1, 2]],
+        )
+        self.assertEqual(
+            set(line_patterns["station_id"]), {"central", "stop-c"}
         )
         self.assertTrue((output_dir / "stations.csv").exists())
         self.assertTrue((output_dir / "stop_services.csv").exists())
+        self.assertTrue((output_dir / "line_patterns.csv").exists())
 
     def test_validation_rejects_services_for_unknown_stations(self) -> None:
         stations = pd.DataFrame(
@@ -210,9 +218,37 @@ class PrepareDataTests(unittest.TestCase):
                 }
             ]
         )
+        line_patterns = pd.DataFrame(
+            [
+                {
+                    "pattern_id": "pattern-1",
+                    "route_id": "route-1",
+                    "transport_type": "Metro",
+                    "line": "10",
+                    "direction": "Hjulsta",
+                    "station_id": "known",
+                    "stop_sequence": 1,
+                },
+                {
+                    "pattern_id": "pattern-1",
+                    "route_id": "route-1",
+                    "transport_type": "Metro",
+                    "line": "10",
+                    "direction": "Hjulsta",
+                    "station_id": "known",
+                    "stop_sequence": 2,
+                },
+            ]
+        )
 
         with self.assertRaisesRegex(DataPreparationError, "missing from stations.csv"):
-            validate_outputs(stations, services, min_stations=1, max_stations=10)
+            validate_outputs(
+                stations,
+                services,
+                line_patterns,
+                min_stations=1,
+                max_stations=10,
+            )
 
 
 if __name__ == "__main__":
