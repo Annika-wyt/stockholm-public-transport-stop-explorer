@@ -53,5 +53,43 @@ def test_streamlit_app_starts_without_exceptions() -> None:
 
     assert not app.exception
     assert app.title[0].value == "Stockholm Public Transport Stop Explorer"
-    assert "Select one of the pink map markers" in app.info[0].value
+    assert "select one of the pink map markers" in app.info[0].value
+    assert [tab.label for tab in app.tabs] == [
+        "🗺️ Explore",
+        "⚖️ Compare",
+        "🧭 Line explorer",
+        "🔗 Direct connection",
+    ]
+    assert app.multiselect[0].label == "Filter markers by transport type"
+    assert app.selectbox[0].label == "Search for a station"
 
+
+def test_search_and_direct_connection_work_in_the_running_app() -> None:
+    app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
+
+    app.selectbox[0].set_value("stockholm-central").run(timeout=10)
+    assert not app.exception
+    assert "Stockholm Central / T-Centralen" in [
+        subheader.value for subheader in app.subheader
+    ]
+
+    app.selectbox[4].set_value("stockholm-central")
+    app.selectbox[5].set_value("slussen")
+    app.run(timeout=10)
+    assert not app.exception
+    assert any("possible direct service" in message.value for message in app.success)
+
+
+def test_comparison_and_line_explorer_work_in_the_running_app() -> None:
+    app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
+
+    app.selectbox[1].set_value("stockholm-central")
+    app.selectbox[2].set_value("slussen")
+    app.selectbox[3].set_value(("Metro", "10"))
+    app.run(timeout=10)
+
+    assert not app.exception
+    subheaders = [subheader.value for subheader in app.subheader]
+    assert "Stockholm Central / T-Centralen" in subheaders
+    assert "Slussen" in subheaders
+    assert any(metric.label == "Stations found" for metric in app.metric)

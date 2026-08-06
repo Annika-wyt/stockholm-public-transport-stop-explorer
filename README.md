@@ -140,6 +140,18 @@ Click a pink station marker to display its transport types, line numbers, and
 destinations. The application reads only the two prepared CSV files; it does not
 load the national GTFS files at runtime.
 
+The completed interface includes:
+
+- Search for a station by name.
+- Filter map markers by transport type.
+- Compare the transport types, lines, and destinations at two stations.
+- Select a transport-type/line pair and display every matching station.
+- Check whether two stations share possible direct services.
+
+The direct-connection result is based on shared static line data. It does not
+verify live schedules, direction, disruptions, or travel time and should not be
+presented as real-time journey advice.
+
 ## Project commands
 
 Use Python 3.10 or newer. On the camp Ubuntu environment, create the virtual

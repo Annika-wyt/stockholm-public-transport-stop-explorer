@@ -9,9 +9,12 @@ import pytest
 
 from transport_data import (
     TransportDataError,
+    filter_stations_by_transport,
     get_services_for_station,
+    get_shared_lines,
     get_station,
     get_station_summary,
+    get_stations_for_line,
     group_services_by_type,
     load_services,
     load_stations,
@@ -88,3 +91,65 @@ def test_real_generated_data_is_queryable() -> None:
     assert get_station(stations, "stockholm-central") is not None
     assert not get_services_for_station(services, "stockholm-central").empty
 
+
+def test_transport_filter_keeps_stations_with_selected_types() -> None:
+    stations = pd.DataFrame(
+        [
+            {"station_id": "a", "station_name": "A"},
+            {"station_id": "b", "station_name": "B"},
+            {"station_id": "c", "station_name": "C"},
+        ]
+    )
+    services = pd.DataFrame(
+        [
+            {"station_id": "a", "transport_type": "Metro", "line": "10"},
+            {"station_id": "b", "transport_type": "Bus", "line": "1"},
+            {"station_id": "c", "transport_type": "Tram", "line": "7"},
+        ]
+    )
+
+    filtered = filter_stations_by_transport(stations, services, ["Metro", "Tram"])
+
+    assert list(filtered["station_id"]) == ["a", "c"]
+    assert filter_stations_by_transport(stations, services, []).empty
+
+
+def test_line_lookup_returns_unique_matching_stations() -> None:
+    stations = pd.DataFrame(
+        [
+            {"station_id": "a", "station_name": "A"},
+            {"station_id": "b", "station_name": "B"},
+            {"station_id": "c", "station_name": "C"},
+        ]
+    )
+    services = pd.DataFrame(
+        [
+            {"station_id": "a", "transport_type": "Metro", "line": "10"},
+            {"station_id": "a", "transport_type": "Metro", "line": "10"},
+            {"station_id": "b", "transport_type": "Metro", "line": "10"},
+            {"station_id": "c", "transport_type": "Bus", "line": "10"},
+        ]
+    )
+
+    matching = get_stations_for_line(stations, services, "Metro", "10")
+
+    assert list(matching["station_id"]) == ["a", "b"]
+
+
+def test_shared_lines_match_both_transport_type_and_line() -> None:
+    services = pd.DataFrame(
+        [
+            {"station_id": "a", "transport_type": "Metro", "line": "10"},
+            {"station_id": "a", "transport_type": "Bus", "line": "1"},
+            {"station_id": "b", "transport_type": "Metro", "line": "10"},
+            {"station_id": "b", "transport_type": "Tram", "line": "1"},
+            {"station_id": "c", "transport_type": "Bus", "line": "55"},
+        ]
+    )
+
+    shared = get_shared_lines(services, "a", "b")
+
+    assert shared.to_dict("records") == [
+        {"transport_type": "Metro", "line": "10"}
+    ]
+    assert get_shared_lines(services, "a", "c").empty

@@ -160,3 +160,71 @@ def get_station_summary(services: pd.DataFrame) -> dict[str, int]:
         "destination_count": int(known_destinations.nunique()),
     }
 
+
+def filter_stations_by_transport(
+    stations: pd.DataFrame,
+    services: pd.DataFrame,
+    transport_types: list[str],
+) -> pd.DataFrame:
+    """Keep stations served by at least one selected transport type."""
+
+    if not transport_types:
+        return stations.iloc[0:0].copy()
+
+    matching_station_ids = services.loc[
+        services["transport_type"].isin(transport_types), "station_id"
+    ].unique()
+    return stations.loc[stations["station_id"].isin(matching_station_ids)].reset_index(
+        drop=True
+    )
+
+
+def get_stations_for_line(
+    stations: pd.DataFrame,
+    services: pd.DataFrame,
+    transport_type: str,
+    line: str,
+) -> pd.DataFrame:
+    """Return the unique stations served by one transport-type/line pair."""
+
+    matching_station_ids = services.loc[
+        services["transport_type"].eq(str(transport_type).strip())
+        & services["line"].eq(str(line).strip()),
+        "station_id",
+    ].unique()
+    return stations.loc[stations["station_id"].isin(matching_station_ids)].reset_index(
+        drop=True
+    )
+
+
+def get_shared_lines(
+    services: pd.DataFrame,
+    first_station_id: str,
+    second_station_id: str,
+) -> pd.DataFrame:
+    """Find transport-type/line pairs serving both selected stations."""
+
+    columns = ["transport_type", "line"]
+    first_lines = get_services_for_station(services, first_station_id)[columns]
+    second_lines = get_services_for_station(services, second_station_id)[columns]
+
+    shared_lines = first_lines.drop_duplicates().merge(
+        second_lines.drop_duplicates(), on=columns, how="inner"
+    )
+    if shared_lines.empty:
+        return shared_lines
+
+    type_order = {
+        transport_type: index
+        for index, transport_type in enumerate(TRANSPORT_TYPE_ORDER)
+    }
+    shared_lines["_type_order"] = shared_lines["transport_type"].map(
+        type_order
+    ).fillna(len(type_order))
+    return (
+        shared_lines.sort_values(
+            ["_type_order", "transport_type", "line"], kind="stable"
+        )
+        .drop(columns="_type_order")
+        .reset_index(drop=True)
+    )
