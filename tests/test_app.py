@@ -93,7 +93,6 @@ def test_streamlit_app_starts_without_exceptions() -> None:
     assert "select one of the pink map markers" in app.info[0].value
     assert [tab.label for tab in app.tabs] == [
         "🗺️ Explore",
-        "⚖️ Compare",
         "🧭 Line explorer",
         "🔗 Direct connection",
     ]
@@ -110,19 +109,28 @@ def test_search_and_direct_connection_work_in_the_running_app() -> None:
         subheader.value for subheader in app.subheader
     ]
 
-    app.selectbox[4].set_value("stockholm-central")
-    app.selectbox[5].set_value("slussen")
+    from_selector = next(
+        selectbox for selectbox in app.selectbox if selectbox.label == "From"
+    )
+    to_selector = next(
+        selectbox for selectbox in app.selectbox if selectbox.label == "To"
+    )
+    from_selector.set_value("stockholm-central")
+    to_selector.set_value("slussen")
     app.run(timeout=10)
     assert not app.exception
     assert any("possible direct service" in message.value for message in app.success)
 
 
-def test_comparison_and_line_explorer_work_in_the_running_app() -> None:
+def test_line_explorer_works_in_the_running_app() -> None:
     app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
 
-    app.selectbox[1].set_value("stockholm-central")
-    app.selectbox[2].set_value("slussen")
-    app.selectbox[3].set_value(("Metro", "10"))
+    line_selector = next(
+        selectbox
+        for selectbox in app.selectbox
+        if selectbox.label == "Select a line"
+    )
+    line_selector.set_value(("Metro", "10"))
     app.run(timeout=10)
 
     patterns = get_patterns_for_line(load_line_patterns(), "Metro", "10")
@@ -135,15 +143,17 @@ def test_comparison_and_line_explorer_work_in_the_running_app() -> None:
     pattern_selector.set_value(pattern_id).run(timeout=10)
 
     assert not app.exception
-    subheaders = [subheader.value for subheader in app.subheader]
-    assert "Stockholm Central / T-Centralen" in subheaders
-    assert "Slussen" in subheaders
     assert any(metric.label == "Stations found" for metric in app.metric)
 
 
 def test_line_explorer_displays_morby_centrum_endpoint() -> None:
     app = AppTest.from_file(PROJECT_DIR / "app.py").run(timeout=10)
-    app.selectbox[3].set_value(("Metro", "14")).run(timeout=10)
+    line_selector = next(
+        selectbox
+        for selectbox in app.selectbox
+        if selectbox.label == "Select a line"
+    )
+    line_selector.set_value(("Metro", "14")).run(timeout=10)
 
     patterns = get_patterns_for_line(load_line_patterns(), "Metro", "14")
     morby_pattern_id = next(

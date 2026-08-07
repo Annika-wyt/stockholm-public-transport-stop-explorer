@@ -151,14 +151,13 @@ python -m streamlit run app.py
 
 Then open `http://localhost:8501` if the browser does not open automatically.
 Click a pink station marker to display its transport types, line numbers, and
-destinations. The application reads only the three prepared CSV files; it does not
+destinations. The application reads only the four prepared CSV files; it does not
 load the national GTFS files at runtime.
 
 The completed interface includes:
 
 - Search for a station by name.
 - Filter map markers by transport type.
-- Compare the transport types, lines, and destinations at two stations.
 - Select a transport-type/line pair and display every matching station.
 - Select a direction/trip pattern and connect its stations in GTFS stop order.
 - Check whether two stations share possible direct services.

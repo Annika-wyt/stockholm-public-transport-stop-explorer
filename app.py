@@ -257,35 +257,6 @@ def render_station_details(
             )
 
 
-def render_comparison_card(
-    station: dict[str, object], station_services: pd.DataFrame
-) -> None:
-    """Display compact information for one side of a station comparison."""
-
-    st.subheader(str(station["station_name"]))
-    summary = get_station_summary(station_services)
-    metric_columns = st.columns(3)
-    metric_columns[0].metric("Types", summary["transport_type_count"])
-    metric_columns[1].metric("Lines", summary["line_count"])
-    metric_columns[2].metric("Destinations", summary["destination_count"])
-
-    grouped_services = group_services_by_type(station_services)
-    transport_labels = [
-        f"{TRANSPORT_ICONS.get(name, '🚏')} {name}" for name in grouped_services
-    ]
-    st.caption(" · ".join(transport_labels))
-
-    station_lines = station_services[["transport_type", "line"]].drop_duplicates()
-    st.dataframe(
-        station_lines.rename(
-            columns={"transport_type": "Transport type", "line": "Line"}
-        ),
-        hide_index=True,
-        width="stretch",
-        height=min(38 + 35 * len(station_lines), 300),
-    )
-
-
 def render_shared_lines(shared_lines: pd.DataFrame) -> None:
     """Display possible services shared by two stations."""
 
@@ -385,41 +356,6 @@ def render_explore_tab(stations: pd.DataFrame, services: pd.DataFrame) -> None:
                     services, selected_station_id
                 )
                 render_station_details(station, station_services)
-
-
-def render_compare_tab(stations: pd.DataFrame, services: pd.DataFrame) -> None:
-    """Render side-by-side summaries for two selected stations."""
-
-    st.write("Choose two stations to compare their transport options.")
-    first_selector, second_selector = st.columns(2)
-    with first_selector:
-        first_id = station_selectbox("First station", stations, "compare-first")
-    with second_selector:
-        second_id = station_selectbox("Second station", stations, "compare-second")
-
-    if first_id is None or second_id is None:
-        st.info("Choose two stations to start the comparison.")
-        return
-    if first_id == second_id:
-        st.warning("Choose two different stations to compare.")
-        return
-
-    first_station = get_station(stations, first_id)
-    second_station = get_station(stations, second_id)
-    if first_station is None or second_station is None:
-        st.warning("One of the selected stations could not be found.")
-        return
-
-    first_services = get_services_for_station(services, first_id)
-    second_services = get_services_for_station(services, second_id)
-    first_column, second_column = st.columns(2, gap="large")
-    with first_column:
-        render_comparison_card(first_station, first_services)
-    with second_column:
-        render_comparison_card(second_station, second_services)
-
-    st.markdown("#### Lines serving both stations")
-    render_shared_lines(get_shared_lines(services, first_id, second_id))
 
 
 def render_line_tab(line_patterns: pd.DataFrame) -> None:
@@ -555,8 +491,7 @@ def main() -> None:
 
     st.title("Stockholm Public Transport Stop Explorer")
     st.write(
-        "Explore stations, compare transport options, inspect lines, and check "
-        "possible direct connections."
+        "Explore stations, inspect lines, and check possible direct connections."
     )
 
     try:
@@ -565,13 +500,11 @@ def main() -> None:
         st.error(str(error))
         st.stop()
 
-    explore_tab, compare_tab, line_tab, direct_tab = st.tabs(
-        ["🗺️ Explore", "⚖️ Compare", "🧭 Line explorer", "🔗 Direct connection"]
+    explore_tab, line_tab, direct_tab = st.tabs(
+        ["🗺️ Explore", "🧭 Line explorer", "🔗 Direct connection"]
     )
     with explore_tab:
         render_explore_tab(stations, services)
-    with compare_tab:
-        render_compare_tab(stations, services)
     with line_tab:
         render_line_tab(line_patterns)
     with direct_tab:
