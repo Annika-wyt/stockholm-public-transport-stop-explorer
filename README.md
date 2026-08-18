@@ -2,10 +2,53 @@
 
 Design and build your own Python application that helps someone investigate a
 public-transport journey in Stockholm. You receive the idea, prepared static
-data, and acceptance criteria—but no application code.
+data, and suggested goals—but no application code.
 
 This is the most independent option. Decide how your application should work,
 break the problem into small tasks, and use AI as a programming partner.
+
+## Getting and updating a branch
+
+Fetch the latest branch information first:
+
+```bash
+git fetch --all
+```
+
+Choose one branch, switch to it, and pull its latest changes.
+
+For the mentor reference:
+
+```bash
+git switch main
+git pull --ff-only
+```
+
+For Option 1:
+
+```bash
+git switch option-1-greenfield
+git pull --ff-only
+```
+
+For Option 2:
+
+```bash
+git switch option-2-barebones
+git pull --ff-only
+```
+
+For Option 3:
+
+```bash
+git switch option-3-mvp
+git pull --ff-only
+```
+
+After `git fetch --all`, Git will normally create a local copy when you switch
+to a remote branch for the first time. If it does not, use
+`git switch --track origin/<branch-name>`. Replace `origin` if your remote has a
+different name; `git remote -v` shows the available names.
 
 ## The idea
 
@@ -56,7 +99,7 @@ other formatting cannot be lost.
 
 The original 1.1 GB national GTFS feed is deliberately not included.
 
-## Minimum acceptance criteria
+## Suggested goals to work toward
 
 - The application launches locally.
 - The user can select two different stations.
@@ -125,7 +168,7 @@ Current milestone:
 Available CSV columns:
 [relevant columns]
 
-Acceptance criteria:
+Goal for this milestone:
 [observable result]
 
 Please suggest the smallest implementation for this milestone, explain it in
@@ -137,4 +180,3 @@ beginner language, and give me a command or test that verifies it.
 Show a journey with a possible direct service, a pair without a direct service,
 and one error case. Be ready to explain how your application matches lines
 between the two stations.
-
