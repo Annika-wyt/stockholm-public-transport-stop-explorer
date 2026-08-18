@@ -8,51 +8,35 @@ Your goal is to turn it into an interactive Public Transport Stop Explorer.
 
 ## Getting and updating a branch
 
-Choose only the branch you want to work on. The first time you use it, run the
-matching commands below.
-
-For the mentor reference:
+If you have not downloaded the project yet, clone only the barebones branch:
 
 ```bash
-git fetch origin main
-git switch main
-git pull --ff-only
+git clone --branch option-2-barebones --single-branch https://github.com/Annika-wyt/stockholm-public-transport-stop-explorer.git
+cd stockholm-public-transport-stop-explorer
 ```
 
-For Option 1:
-
-```bash
-git fetch origin option-1-greenfield
-git switch --track origin/option-1-greenfield
-git pull --ff-only
-```
-
-For Option 2:
+If you already cloned the repository, download the latest information for this
+branch and switch to it:
 
 ```bash
 git fetch origin option-2-barebones
+git switch option-2-barebones
+git pull origin option-2-barebones
+```
+
+If Git says the branch does not exist locally, create it from the GitHub branch:
+
+```bash
 git switch --track origin/option-2-barebones
-git pull --ff-only
 ```
 
-For Option 3:
+Confirm that you are on the correct branch:
 
 ```bash
-git fetch origin option-3-mvp
-git switch --track origin/option-3-mvp
-git pull --ff-only
+git branch --show-current
 ```
 
-Each `git fetch` command above downloads only the named branch. Once the branch
-exists locally, update it later with:
-
-```bash
-git switch <branch-name>
-git pull --ff-only
-```
-
-Replace `<branch-name>` with the branch you chose. If your remote is not named
-`origin`, replace `origin` with the remote name shown by `git remote -v`.
+The command should print `option-2-barebones`.
 
 ## What is already provided
 
