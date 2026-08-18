@@ -8,17 +8,13 @@ Your goal is to turn it into an interactive Public Transport Stop Explorer.
 
 ## Getting and updating a branch
 
-Fetch the latest branch information first:
-
-```bash
-git fetch --all
-```
-
-Choose one branch, switch to it, and pull its latest changes.
+Choose only the branch you want to work on. The first time you use it, run the
+matching commands below.
 
 For the mentor reference:
 
 ```bash
+git fetch origin main
 git switch main
 git pull --ff-only
 ```
@@ -26,28 +22,37 @@ git pull --ff-only
 For Option 1:
 
 ```bash
-git switch option-1-greenfield
+git fetch origin option-1-greenfield
+git switch --track origin/option-1-greenfield
 git pull --ff-only
 ```
 
 For Option 2:
 
 ```bash
-git switch option-2-barebones
+git fetch origin option-2-barebones
+git switch --track origin/option-2-barebones
 git pull --ff-only
 ```
 
 For Option 3:
 
 ```bash
-git switch option-3-mvp
+git fetch origin option-3-mvp
+git switch --track origin/option-3-mvp
 git pull --ff-only
 ```
 
-After `git fetch --all`, Git will normally create a local copy when you switch
-to a remote branch for the first time. If it does not, use
-`git switch --track origin/<branch-name>`. Replace `origin` if your remote has a
-different name; `git remote -v` shows the available names.
+Each `git fetch` command above downloads only the named branch. Once the branch
+exists locally, update it later with:
+
+```bash
+git switch <branch-name>
+git pull --ff-only
+```
+
+Replace `<branch-name>` with the branch you chose. If your remote is not named
+`origin`, replace `origin` with the remote name shown by `git remote -v`.
 
 ## What is already provided
 
