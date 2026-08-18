@@ -6,51 +6,35 @@ types, line numbers, and destinations serving it.
 
 ## Getting and updating a branch
 
-Choose only the branch you want to work on. The first time you use it, run the
-matching commands below.
-
-For the mentor reference:
+If you have not downloaded the project yet, clone only the MVP branch:
 
 ```bash
-git fetch origin main
-git switch main
-git pull --ff-only
+git clone --branch option-3-mvp --single-branch https://github.com/Annika-wyt/stockholm-public-transport-stop-explorer.git
+cd stockholm-public-transport-stop-explorer
 ```
 
-For Option 1:
-
-```bash
-git fetch origin option-1-greenfield
-git switch --track origin/option-1-greenfield
-git pull --ff-only
-```
-
-For Option 2:
-
-```bash
-git fetch origin option-2-barebones
-git switch --track origin/option-2-barebones
-git pull --ff-only
-```
-
-For Option 3:
+If you already cloned the repository, download the latest information for this
+branch and switch to it:
 
 ```bash
 git fetch origin option-3-mvp
-git switch --track origin/option-3-mvp
-git pull --ff-only
+git switch option-3-mvp
+git pull origin option-3-mvp
 ```
 
-Each `git fetch` command above downloads only the named branch. Once the branch
-exists locally, update it later with:
+If Git says the branch does not exist locally, create it from the GitHub branch:
 
 ```bash
-git switch <branch-name>
-git pull --ff-only
+git switch --track origin/option-3-mvp
 ```
 
-Replace `<branch-name>` with the branch you chose. If your remote is not named
-`origin`, replace `origin` with the remote name shown by `git remote -v`.
+Confirm that you are on the correct branch:
+
+```bash
+git branch --show-current
+```
+
+The command should print `option-3-mvp`.
 
 ## Project status
 
