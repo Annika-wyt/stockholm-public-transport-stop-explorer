@@ -18,6 +18,49 @@ programming camp:
 
 Students can change tracks if they need more or less structure.
 
+## Getting and updating a branch
+
+Fetch the latest branch information first:
+
+```bash
+git fetch --all
+```
+
+Choose one branch, switch to it, and pull its latest changes.
+
+For the mentor reference:
+
+```bash
+git switch main
+git pull --ff-only
+```
+
+For Option 1:
+
+```bash
+git switch option-1-greenfield
+git pull --ff-only
+```
+
+For Option 2:
+
+```bash
+git switch option-2-barebones
+git pull --ff-only
+```
+
+For Option 3:
+
+```bash
+git switch option-3-mvp
+git pull --ff-only
+```
+
+After `git fetch --all`, Git will normally create a local copy when you switch
+to a remote branch for the first time. If it does not, use
+`git switch --track origin/<branch-name>`. Replace `origin` if your remote has a
+different name; `git remote -v` shows the available names.
+
 ## Project status
 
 Phases 1 through 4 are complete. The project includes the mentor-owned GTFS
