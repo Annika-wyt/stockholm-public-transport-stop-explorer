@@ -20,51 +20,36 @@ Students can change tracks if they need more or less structure.
 
 ## Getting and updating a branch
 
-Choose only the branch you want to work on. The first time you use it, run the
-matching commands below.
+If you have not downloaded the project yet, clone only the mentor reference
+branch:
 
-For the mentor reference:
+```bash
+git clone --branch main --single-branch https://github.com/Annika-wyt/stockholm-public-transport-stop-explorer.git
+cd stockholm-public-transport-stop-explorer
+```
+
+If you already cloned the repository, download the latest information for this
+branch and switch to it:
 
 ```bash
 git fetch origin main
 git switch main
-git pull --ff-only
+git pull origin main
 ```
 
-For Option 1:
+If Git says the branch does not exist locally, create it from the GitHub branch:
 
 ```bash
-git fetch origin option-1-greenfield
-git switch --track origin/option-1-greenfield
-git pull --ff-only
+git switch --track origin/main
 ```
 
-For Option 2:
+Confirm that you are on the correct branch:
 
 ```bash
-git fetch origin option-2-barebones
-git switch --track origin/option-2-barebones
-git pull --ff-only
+git branch --show-current
 ```
 
-For Option 3:
-
-```bash
-git fetch origin option-3-mvp
-git switch --track origin/option-3-mvp
-git pull --ff-only
-```
-
-Each `git fetch` command above downloads only the named branch. Once the branch
-exists locally, update it later with:
-
-```bash
-git switch <branch-name>
-git pull --ff-only
-```
-
-Replace `<branch-name>` with the branch you chose. If your remote is not named
-`origin`, replace `origin` with the remote name shown by `git remote -v`.
+The command should print `main`.
 
 ## Project status
 
