@@ -6,6 +6,49 @@ Streamlit page that launches, and small data-loading functions.
 
 Your goal is to turn it into an interactive Public Transport Stop Explorer.
 
+## Getting and updating a branch
+
+Fetch the latest branch information first:
+
+```bash
+git fetch --all
+```
+
+Choose one branch, switch to it, and pull its latest changes.
+
+For the mentor reference:
+
+```bash
+git switch main
+git pull --ff-only
+```
+
+For Option 1:
+
+```bash
+git switch option-1-greenfield
+git pull --ff-only
+```
+
+For Option 2:
+
+```bash
+git switch option-2-barebones
+git pull --ff-only
+```
+
+For Option 3:
+
+```bash
+git switch option-3-mvp
+git pull --ff-only
+```
+
+After `git fetch --all`, Git will normally create a local copy when you switch
+to a remote branch for the first time. If it does not, use
+`git switch --track origin/<branch-name>`. Replace `origin` if your remote has a
+different name; `git remote -v` shows the available names.
+
 ## What is already provided
 
 - 283 prepared Stockholm stations in `data/stations.csv`
@@ -42,7 +85,7 @@ Complete one checkpoint at a time.
 9. Handle no selection and missing data without crashing.
 10. Remove checkpoint test skips as each function is completed.
 
-## Minimum acceptance criteria
+## Suggested goals to work toward
 
 - The application launches locally.
 - At least 20 stations appear on a map.
@@ -85,4 +128,3 @@ and tell me which test skip I can remove to verify it.
 
 Run the application and tests after every checkpoint. Do not move on until you
 can explain what the new code does.
-
