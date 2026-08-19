@@ -1,4 +1,3 @@
-# Python 3.10 or newer is required by the supported Streamlit versions.
 pandas>=2.0,<4
 pydeck>=0.9,<1
 streamlit>=1.41,<2

@@ -122,19 +122,139 @@ You may organize the code differently if you can explain your design.
 - Find possible one-transfer connections as an experimental feature.
 - Let the user save favourite journeys during the current session.
 
-## Setup
+## How To Run The App
+
+Open the project folder in VS Code, then open the integrated terminal by
+selecting **Terminal > New Terminal**. Make sure the terminal is inside the
+`stockholm-public-transport-stop-explorer` folder before running the commands
+below.
+
+### What Is a Python Virtual Environment?
+
+A virtual environment is a private place for this project's Python packages.
+It keeps packages such as Streamlit separate from packages used by your other
+Python projects. The `.venv` folder created below is that private place.
+
+You create the virtual environment once. Each time you open a new VS Code
+terminal to work on the project, activate it again before running the app.
+
+### Should I Use `python` or `python3`?
+
+The correct command depends on how Python was installed and configured on your
+computer. Check which command works in your VS Code terminal:
 
 ```bash
-python3.10 -m venv .venv
+python --version
+```
+
+If that command is not found, try:
+
+```bash
+python3 --version
+```
+
+Use the command that displays a Python version when creating the virtual
+environment. After the environment is activated, `python` will normally point
+to the Python inside `.venv`.
+
+### Linux
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages:
+
+```bash
 python -m pip install -r requirements.txt
 ```
 
-You will create the application files yourself. A common launch command is:
+### macOS
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+### Windows
+
+VS Code normally opens PowerShell on Windows. Create and activate the virtual
+environment with:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If your computer uses `python3`, use `python3 -m venv .venv` instead.
+
+Install the packages:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+If you use Command Prompt instead of PowerShell, activate the environment with:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+### Run the App
+
+This option does not include an application file because you will create it
+yourself. After you create `app.py`, start it with:
 
 ```bash
 python -m streamlit run app.py
+```
+
+The app will open in your browser. If it does not open automatically, open the
+local URL shown in the terminal. Press **Ctrl+C** in the terminal to stop the
+app.
+
+### Run the App Again Later
+
+After the first setup, open a new VS Code terminal and activate the existing
+virtual environment. On Linux or macOS, run:
+
+```bash
+source .venv/bin/activate
+```
+
+On Windows PowerShell, run:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Then start the app:
+
+```bash
+python -m streamlit run app.py
+```
+
+Run `deactivate` when you want to leave the virtual environment.
+
+After you add tests, run them while the virtual environment is active with:
+
+```bash
+python -m pytest tests
 ```
 
 ## AI working agreement
