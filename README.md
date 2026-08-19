@@ -145,36 +145,137 @@ groups = group_services_by_type(selected)
 The loading functions remove duplicate rows, ignore unusable station rows, and
 replace missing labels with readable values such as `Unknown destination`.
 
-## Running the application
+## How To Run The App
 
-Start the local application from this directory:
+Open the project folder in VS Code, then open the integrated terminal by
+selecting **Terminal > New Terminal**. Make sure the terminal is inside the
+`stockholm-public-transport-stop-explorer` folder before running the commands
+below.
+
+### What Is a Python Virtual Environment?
+
+A virtual environment is a private place for this project's Python packages.
+It keeps packages such as Streamlit separate from packages used by your other
+Python projects. The `.venv` folder created below is that private place.
+
+You create the virtual environment once. Each time you open a new VS Code
+terminal to work on the project, activate it again before running the app.
+
+### Should I Use `python` or `python3`?
+
+The correct command depends on how Python was installed and configured on your
+computer. Check which command works in your VS Code terminal:
 
 ```bash
-python -m streamlit run app.py
-```
-
-Then open `http://localhost:8501` if the browser does not open automatically.
-Click a pink station marker to display its transport types, line numbers, and
-destinations. The application reads only the two prepared CSV files; it does not
-load the national GTFS files at runtime.
-
-## Project commands
-
-Use Python 3.10 or newer. On the camp Ubuntu environment, create the virtual
-environment explicitly with `python3.10` so it does not use the older system
-Python 3.8:
-
-```bash
-python3.10 --version
-python3.10 -m venv .venv
-source .venv/bin/activate
 python --version
-python -m pip install --upgrade pip
+```
+
+If that command is not found, try:
+
+```bash
+python3 --version
+```
+
+Use the command that displays a Python version when creating the virtual
+environment. After the environment is activated, `python` will normally point
+to the Python inside `.venv`.
+
+### Linux
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```bash
 python -m pip install -r requirements.txt
-python prepare_data.py
-pytest
 python -m streamlit run app.py
 ```
+
+### macOS
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+### Windows
+
+VS Code normally opens PowerShell on Windows. Create and activate the virtual
+environment with:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If your computer uses `python3`, use `python3 -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```powershell
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+If you use Command Prompt instead of PowerShell, activate the environment with:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+### Run the App Again Later
+
+After the first setup, open a new VS Code terminal and activate the existing
+virtual environment. On Linux or macOS, run:
+
+```bash
+source .venv/bin/activate
+```
+
+On Windows PowerShell, run:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Then start the app:
+
+```bash
+python -m streamlit run app.py
+```
+
+The app will open in your browser. If it does not open automatically, open the
+local URL shown in the terminal. Click a pink station marker to display its
+transport types, line numbers, and destinations. Press **Ctrl+C** in the
+terminal to stop the app. Run `deactivate` when you want to leave the virtual
+environment.
+
+To run the tests while the virtual environment is active:
+
+```bash
+python -m pytest tests
+```
+
+The application reads only the prepared CSV files in the `data` folder. You do
+not need to download or prepare the original national transport data to run it.
 
 ## Scope
 
