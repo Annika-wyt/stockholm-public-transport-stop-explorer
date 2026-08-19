@@ -48,16 +48,135 @@ The command should print `option-2-barebones`.
 
 The large national GTFS source files are not needed.
 
-## Setup
+## How To Run The App
+
+Open the project folder in VS Code, then open the integrated terminal by
+selecting **Terminal > New Terminal**. Make sure the terminal is inside the
+`stockholm-public-transport-stop-explorer` folder before running the commands
+below.
+
+### What Is a Python Virtual Environment?
+
+A virtual environment is a private place for this project's Python packages.
+It keeps packages such as Streamlit separate from packages used by your other
+Python projects. The `.venv` folder created below is that private place.
+
+You create the virtual environment once. Each time you open a new VS Code
+terminal to work on the project, activate it again before running the app.
+
+### Should I Use `python` or `python3`?
+
+The correct command depends on how Python was installed and configured on your
+computer. Check which command works in your VS Code terminal:
 
 ```bash
-python3.10 -m venv .venv
+python --version
+```
+
+If that command is not found, try:
+
+```bash
+python3 --version
+```
+
+Use the command that displays a Python version when creating the virtual
+environment. After the environment is activated, `python` will normally point
+to the Python inside `.venv`.
+
+### Linux
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
 source .venv/bin/activate
-python -m pip install --upgrade pip
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```bash
 python -m pip install -r requirements.txt
-pytest
 python -m streamlit run app.py
 ```
+
+### macOS
+
+In the VS Code terminal, create and activate the virtual environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+If your computer uses `python`, use `python -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```bash
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+### Windows
+
+VS Code normally opens PowerShell on Windows. Create and activate the virtual
+environment with:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+```
+
+If your computer uses `python3`, use `python3 -m venv .venv` instead.
+
+Install the packages and start the app:
+
+```powershell
+python -m pip install -r requirements.txt
+python -m streamlit run app.py
+```
+
+If you use Command Prompt instead of PowerShell, activate the environment with:
+
+```bat
+.venv\Scripts\activate.bat
+```
+
+### Run the App Again Later
+
+After the first setup, open a new VS Code terminal and activate the existing
+virtual environment. On Linux or macOS, run:
+
+```bash
+source .venv/bin/activate
+```
+
+On Windows PowerShell, run:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Then start the app:
+
+```bash
+python -m streamlit run app.py
+```
+
+The app will open in your browser. If it does not open automatically, open the
+local URL shown in the terminal. Press **Ctrl+C** in the terminal to stop the
+app. Run `deactivate` when you want to leave the virtual environment.
+
+To run the tests while the virtual environment is active:
+
+```bash
+python -m pytest tests
+```
+
+The application reads only the prepared CSV files in the `data` folder. You do
+not need to download or prepare the original national transport data to run it.
 
 ## Student checkpoints
 
